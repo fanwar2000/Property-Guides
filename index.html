@@ -1,6 +1,12 @@
 <!DOCTYPE html> 
 <html lang="en">
 <head>
+    <script>
+    // Redirect Netlify Identity tokens to /admin/
+    if (window.location.hash && (window.location.hash.indexOf('invite_token=') > -1 || window.location.hash.indexOf('recovery_token=') > -1 || window.location.hash.indexOf('confirmation_token=') > -1)) {
+      window.location.replace('/admin/' + window.location.hash);
+    }
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Property Guide</title>
