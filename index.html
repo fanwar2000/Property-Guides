@@ -758,8 +758,41 @@
       });
     });
   </script>
-        <script>
-    // Load address from CMS data
+            <script>
+    // Helper: update section location and tips/notes from JSON data
+    function loadSection(id, file) {
+      fetch(file)
+        .then(function(r){ return r.json(); })
+        .then(function(data){
+          var sec = document.getElementById(id);
+          if (!sec) return;
+          // Update location text
+          if (data.location) {
+            var locEl = sec.querySelector('.loc-text');
+            if (locEl) locEl.textContent = data.location;
+          }
+          // Update tips list
+          if (data.tips && data.tips.length) {
+            var tipsList = sec.querySelector('.tips');
+            if (tipsList) {
+              tipsList.innerHTML = '';
+              data.tips.forEach(function(tip, i) {
+                var li = document.createElement('li');
+                li.innerHTML = '<span class="tip-num">' + (i+1) + '</span> ' + tip;
+                tipsList.appendChild(li);
+              });
+            }
+          }
+          // Update notes
+          if (data.notes) {
+            var notesEl = sec.querySelector('.notes');
+            if (notesEl) notesEl.textContent = data.notes;
+          }
+        })
+        .catch(function(){});
+    }
+
+    // Load address
     fetch('/_data/site.json')
       .then(function(r){ return r.json(); })
       .then(function(data){
@@ -775,6 +808,15 @@
         }
       })
       .catch(function(){});
+
+    // Load all sections
+    loadSection('smoke',        '/_data/smoke.json');
+    loadSection('water-heater', '/_data/water-heater.json');
+    loadSection('breaker',      '/_data/breaker.json');
+    loadSection('shutoff',      '/_data/shutoff.json');
+    loadSection('hvac',         '/_data/hvac.json');
+    loadSection('meter',        '/_data/meter.json');
+    loadSection('cameras',      '/_data/cameras.json');
     </script>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </body>
