@@ -14,12 +14,12 @@ collections:
     extension: "json"
     format: "json"
     summary: "{{address}}"
-    preview_path: "property/?id={{slug}}"
+    preview_path: "property/?id={{filename}}"
     fields:
       - label: "Property URL Slug"
         name: "slug"
         widget: "string"
-        hint: "Live URL: https://cityblockhomeguide.netlify.app/property/?id=YOUR-SLUG — use lowercase, dashes only (e.g. 1310-pete-dickens)"
+        hint: "This becomes the URL: https://cityblockhomeguide.netlify.app/property/?id=YOUR-SLUG"
       - { label: "Street Address", name: "address", widget: "string" }
       - { label: "City, State ZIP", name: "city", widget: "string" }
       - label: "Sections"
