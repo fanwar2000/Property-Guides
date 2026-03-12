@@ -4,34 +4,73 @@ backend:
 media_folder: "uploads"
 public_folder: "/uploads"
 collections:
-  - name: "property"
-    label: "Property Guide"
-    files:
-      - name: "site"
-        label: "Site Settings (Address)"
-        file: "_data/site.json"
-        fields:
-          - { label: "Property Address", name: "address", widget: "string" }
-          - { label: "City, State ZIP", name: "city", widget: "string" }
 
-      - name: "sections"
-        label: "Sections"
-        file: "_data/sections.json"
+  # ── PROPERTIES ──────────────────────────────────────────────
+  # Each property gets its own JSON file in _data/properties/
+  # URL: /property/?id=<slug>  e.g. /property/?id=1310-pete-dickens
+  - name: "properties"
+    label: "Properties"
+    label_singular: "Property"
+    folder: "_data/properties"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    summary: "{{address}}"
+    fields:
+      - { label: "Property URL Slug (no spaces, e.g. 1310-pete-dickens)", name: "slug", widget: "string" }
+      - { label: "Street Address", name: "address", widget: "string" }
+      - { label: "City, State ZIP", name: "city", widget: "string" }
+      - label: "Sections"
+        name: "sections"
+        widget: "list"
+        summary: "{{fields.id}}"
+        fields:
+          - { label: "Section ID (must match a section type: smoke, water-heater, breaker, shutoff, hvac, meter, cameras)", name: "id", widget: "string" }
+          - { label: "Location Description", name: "location", widget: "text" }
+          - label: "Tips"
+            name: "tips"
+            widget: "list"
+            required: false
+            allow_add: true
+          - { label: "Notes", name: "notes", widget: "text", required: false }
+          - { label: "Photo", name: "image", widget: "image", required: false }
+
+  # ── SECTION TYPES ────────────────────────────────────────────
+  # Shared section definitions (icon, category, title)
+  # Changing these affects all properties
+  - name: "section_types"
+    label: "Section Types"
+    label_singular: "Section Type"
+    files:
+      - name: "section_types"
+        label: "Section Types"
+        file: "_data/section-types.json"
         fields:
           - label: "Sections"
             name: "sections"
             widget: "list"
             summary: "{{fields.title}}"
             fields:
-              - { label: "Section ID (no spaces, e.g. smoke)", name: "id", widget: "string" }
-              - { label: "Emoji Icon", name: "icon", widget: "string", default: "🏠" }
-              - { label: "Category Label", name: "category", widget: "string", default: "General" }
+              - { label: "ID (no spaces)", name: "id", widget: "string" }
+              - { label: "Emoji Icon", name: "icon", widget: "string" }
+              - { label: "Category", name: "category", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Location Description", name: "location", widget: "text" }
-              - label: "Tips"
-                name: "tips"
-                widget: "list"
-                required: false
-                allow_add: true
-              - { label: "Notes", name: "notes", widget: "text", required: false }
-              - { label: "Photo", name: "image", widget: "image", required: false }
+
+  # ── PROPERTIES DIRECTORY ───────────────────────────────────────
+  # Homepage listing - add new properties here after creating them
+  - name: "directory"
+    label: "Properties Directory"
+    files:
+      - name: "properties_list"
+        label: "Properties Directory"
+        file: "_data/properties-list.json"
+        fields:
+          - label: "Properties"
+            name: "properties"
+            widget: "list"
+            summary: "{{fields.address}}"
+            fields:
+              - { label: "URL Slug (matches the property filename)", name: "slug", widget: "string" }
+              - { label: "Street Address", name: "address", widget: "string" }
+              - { label: "City, State ZIP", name: "city", widget: "string" }

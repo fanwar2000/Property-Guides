@@ -1,0 +1,11 @@
+{
+  "sections": [
+    { "id": "smoke",       "icon": "🔥", "category": "Safety",      "title": "Smoke Alarm Location" },
+    { "id": "water-heater","icon": "🛃", "category": "Utilities",   "title": "Water Heater Location" },
+    { "id": "breaker",     "icon": "⚡",  "category": "Utilities",   "title": "Circuit Breaker Location" },
+    { "id": "shutoff",     "icon": "🚰", "category": "Emergency",   "title": "Water Shut Off Location" },
+    { "id": "hvac",        "icon": "💨", "category": "Maintenance", "title": "HVAC Filter Location" },
+    { "id": "meter",       "icon": "🔌", "category": "Utilities",   "title": "Electric Meter Location" },
+    { "id": "cameras",     "icon": "📷", "category": "Security",    "title": "Camera System" }
+  ]
+}

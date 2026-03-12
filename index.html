@@ -1,181 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script>
-    var hash = window.location.hash;
-    if (hash && hash.indexOf('invite_token=') > -1) {
-      var token = hash.split('invite_token=')[1].split('&')[0];
-      window.location.replace('/admin/index.html#invite_token=' + token);
-    } else if (hash && hash.indexOf('recovery_token=') > -1) {
-      var token = hash.split('recovery_token=')[1].split('&')[0];
-      window.location.replace('/admin/index.html#recovery_token=' + token);
-    }
-    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Property Guide</title>
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <title>Property Guides</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet" />
     <style>
-    /* ============================================================
-       STAFF EDIT AREA - Colors & branding only
-    ============================================================ */
-    :root {
-      --blue:       #0088BB;
-      --blue-dark:  #005F88;
-      --blue-deeper:#003F5C;
-      --blue-light: #E6F6FC;
-      --blue-mid:   #B3DFF0;
-      --accent:     #FFD422;
-      --white:      #FFFFFF;
-      --ink:        #0D1F2D;
-      --ink-soft:   #3A5568;
-      --border:     #D6EDF7;
-      --bg:         #F4FAFD;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; font-size: 16px; }
-    body { font-family: 'Montserrat', sans-serif; background: var(--bg); color: var(--ink); -webkit-font-smoothing: antialiased; }
-    .header { background: var(--blue-deeper); position: relative; overflow: hidden; }
-    .header::before { content: ''; position: absolute; width: 500px; height: 500px; border-radius: 50%; background: rgba(0,140,190,0.18); top: -200px; right: -100px; pointer-events: none; }
-    .header::after { content: ''; position: absolute; width: 300px; height: 300px; border-radius: 50%; background: rgba(255,212,34,0.07); bottom: -120px; left: -60px; pointer-events: none; }
-    .header-inner { position: relative; max-width: 680px; margin: 0 auto; padding: 48px 28px 40px; }
-    .header-eyebrow { display: inline-flex; align-items: center; gap: 7px; font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px; }
-    .header-eyebrow::before { content: ''; display: block; width: 20px; height: 2px; background: var(--accent); border-radius: 2px; }
-    .header-logo { margin-bottom: 22px; }
-    .header-logo img { height: 38px; width: auto; display: block; mix-blend-mode: screen; filter: brightness(1.05); }
-    .header-welcome { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 6px; }
-    .header-address { font-size: clamp(1.3rem, 4.5vw, 1.85rem); font-weight: 800; color: var(--white); line-height: 1.15; letter-spacing: -0.01em; margin-bottom: 4px; word-break: break-word; }
-    .header-city { font-size: 0.85rem; font-weight: 400; color: rgba(255,255,255,0.45); margin-bottom: 32px; letter-spacing: 0.03em; }
-    .nav-chips { display: flex; flex-wrap: wrap; gap: 8px; }
-    .nav-chips a { font-size: 10.5px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; text-decoration: none; color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.13); border-radius: 6px; padding: 7px 12px; transition: all 0.18s ease; }
-    .nav-chips a:hover { background: var(--accent); color: var(--ink); border-color: var(--accent); }
-    .header-stripe { height: 3px; background: linear-gradient(90deg, var(--blue) 0%, var(--blue-mid) 55%, transparent 100%); }
-    .content { max-width: 680px; margin: 0 auto; padding: 24px 20px 80px; }
-    .card { background: var(--white); border-radius: 12px; margin-bottom: 8px; border: 1px solid var(--border); overflow: hidden; transition: box-shadow 0.2s, border-color 0.2s; }
-    .card:hover { box-shadow: 0 4px 18px rgba(0,100,160,0.09); border-color: var(--blue-mid); }
-    .card-header { display: flex; align-items: center; gap: 13px; padding: 16px 18px; cursor: pointer; user-select: none; }
-    .card-icon { width: 38px; height: 38px; border-radius: 9px; background: var(--blue-light); display: flex; align-items: center; justify-content: center; font-size: 17px; flex-shrink: 0; transition: background 0.2s; }
-    .card.open .card-icon { background: var(--blue); }
-    .card-text { flex: 1; min-width: 0; }
-    .card-category { font-size: 9px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--blue); margin-bottom: 2px; }
-    .card-title { font-size: 0.9rem; font-weight: 700; color: var(--ink); }
-    .card-toggle { width: 26px; height: 26px; border-radius: 50%; border: 1.5px solid var(--border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.2s; }
-    .card-toggle svg { width: 11px; height: 11px; fill: none; stroke: var(--ink-soft); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.25s; }
-    .card.open .card-toggle { background: var(--blue); border-color: var(--blue); }
-    .card.open .card-toggle svg { stroke: white; transform: rotate(180deg); }
-    .card-body { display: none; padding: 0 18px 18px; border-top: 1px solid var(--blue-light); }
-    .card.open .card-body { display: block; animation: reveal 0.2s ease; }
-    @keyframes reveal { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
-    .location-pill { display: flex; align-items: flex-start; gap: 10px; background: var(--blue-light); border-left: 3px solid var(--blue); border-radius: 0 8px 8px 0; padding: 12px 14px; margin: 13px 0; }
-    .pin { font-size: 14px; margin-top: 1px; flex-shrink: 0; }
-    .loc-inner { flex: 1; }
-    .loc-label { font-size: 9px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--blue-dark); margin-bottom: 3px; }
-    .loc-text { font-size: 0.845rem; font-weight: 500; color: var(--ink); line-height: 1.55; }
-    .tips { list-style: none; }
-    .tips li { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--blue-light); font-size: 0.825rem; line-height: 1.55; color: var(--ink-soft); font-weight: 400; }
-    .tips li:last-child { border-bottom: none; }
-    .tip-num { width: 19px; height: 19px; border-radius: 50%; background: var(--blue); color: white; font-size: 9.5px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
-    .notes { font-size: 0.825rem; font-weight: 400; color: var(--ink-soft); line-height: 1.7; margin-top: 10px; padding-top: 6px; }
-    .section-photo-wrap { margin-top: 14px; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); background: var(--blue-light); position: relative; }
-    .section-photo-wrap img { width: 100%; height: 200px; object-fit: cover; display: block; }
-    .section-photo-wrap.placeholder { height: 80px; display: flex; align-items: center; justify-content: center; border: 1.5px dashed var(--blue-mid); background: var(--blue-light); }
-    .section-photo-wrap.placeholder span { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em; color: var(--blue); opacity: 0.7; text-transform: uppercase; text-align: center; padding: 0 12px; line-height: 1.5; }
-    .section-photo-caption { font-size: 0.72rem; font-weight: 500; color: var(--muted, #7BAFC5); margin-top: 6px; text-align: center; letter-spacing: 0.03em; }
-    footer { text-align: center; padding: 24px 24px 40px; font-size: 0.75rem; font-weight: 500; color: #94B8CC; letter-spacing: 0.04em; line-height: 1.8; }
-    footer strong { color: var(--blue-dark); font-weight: 700; }
-    @media (max-width: 440px) { .header-inner { padding: 34px 18px 30px; } .content { padding: 18px 12px 60px; } }
+    :root{--blue:#0088BB;--blue-dark:#005F88;--blue-deeper:#003F5C;--blue-light:#E6F6FC;--accent:#FFD422;--white:#fff;--ink:#0D1F2D;--ink-soft:#3A5568;--border:#D6EDF7;--bg:#F4FAFD;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{font-size:16px;}body{font-family:'Montserrat',sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;min-height:100vh;}
+    .header{background:var(--blue-deeper);position:relative;overflow:hidden;}
+    .header::before{content:'';position:absolute;width:500px;height:500px;border-radius:50%;background:rgba(0,140,190,0.18);top:-200px;right:-100px;pointer-events:none;}
+    .header-inner{position:relative;max-width:680px;margin:0 auto;padding:48px 28px 44px;}
+    .header-logo{margin-bottom:22px;}
+    .header-logo img{height:38px;width:auto;display:block;mix-blend-mode:screen;filter:brightness(1.05);}
+    .header-eyebrow{font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;}
+    .header-title{font-size:clamp(1.4rem,5vw,2rem);font-weight:800;color:var(--white);line-height:1.15;}
+    .header-subtitle{font-size:0.85rem;color:rgba(255,255,255,0.45);margin-top:6px;}
+    .header-stripe{height:3px;background:linear-gradient(90deg,var(--blue) 0%,rgba(179,223,240,0.6) 55%,transparent 100%);}
+    .content{max-width:680px;margin:0 auto;padding:32px 20px 80px;}
+    .section-title{font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--blue);margin-bottom:14px;}
+    .property-grid{display:flex;flex-direction:column;gap:8px;}
+    .property-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:18px 20px;text-decoration:none;color:var(--ink);display:flex;align-items:center;justify-content:space-between;transition:box-shadow 0.2s,border-color 0.2s;}
+    .property-card:hover{box-shadow:0 4px 18px rgba(0,100,160,0.09);border-color:var(--blue);}
+    .prop-icon{width:40px;height:40px;border-radius:10px;background:var(--blue-light);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;margin-right:14px;}
+    .prop-info{flex:1;}
+    .prop-address{font-size:0.9rem;font-weight:700;color:var(--ink);}
+    .prop-city{font-size:0.78rem;font-weight:400;color:var(--ink-soft);margin-top:2px;}
+    .prop-url{font-size:0.7rem;font-weight:600;letter-spacing:0.05em;color:var(--blue);margin-top:4px;text-transform:uppercase;}
+    .prop-arrow{font-size:1.1rem;color:var(--blue);flex-shrink:0;}
+    .empty{color:var(--ink-soft);font-size:0.85rem;text-align:center;padding:40px 0;}
+    footer{text-align:center;padding:24px;font-size:0.75rem;color:#94B8CC;}
     </style>
 </head>
 <body>
-    <header class="header">
-        <div class="header-inner">
-            <div class="header-logo">
-                <img src="https://raw.githubusercontent.com/fanwar2000/Property-Guides/main/logo.png" alt="CityBlock" />
-            </div>
-            <div class="header-welcome">Welcome to</div>
-            <!-- Update property address -->
-            <div class="header-address" id="prop-address">Loading...</div>
-            <div class="header-city" id="prop-city"></div>
-            <nav class="nav-chips" id="nav-chips"></nav>
-        </div>
-    </header>
-    <div class="header-stripe"></div>
-    <main class="content" id="sections-container"></main>
-    <footer>
-        Questions? Contact your property manager.<br />
-        <strong id="footer-address"></strong>
-    </footer>
+<header class="header">
+    <div class="header-inner">
+        <div class="header-logo"><img src="/logo.png" alt="CityBlock" /></div>
+        <div class="header-eyebrow">CityBlock Property Management</div>
+        <div class="header-title">Property Guides</div>
+        <div class="header-subtitle">Select a property to view its guide</div>
+    </div>
+</header>
+<div class="header-stripe"></div>
+<main class="content">
+    <div class="section-title">All Properties</div>
+    <div class="property-grid" id="property-grid"><div class="empty">Loading properties...</div></div>
+</main>
+<footer>CityBlock Property Management</footer>
 <script>
-function toggle(header) {
-    header.closest('.card').classList.toggle('open');
-}
-
-function buildCard(sec) {
-    var tipsHtml = '';
-    if (sec.tips && sec.tips.length) {
-        tipsHtml = '<ul class="tips">';
-        sec.tips.forEach(function(tip, i) {
-            tipsHtml += '<li><span class="tip-num">' + (i+1) + '</span> ' + tip + '</li>';
-        });
-        tipsHtml += '</ul>';
-    }
-    var notesHtml = sec.notes ? '<p class="notes">' + sec.notes + '</p>' : '';
-    var photoHtml = sec.image
-        ? '<div class="section-photo-wrap" id="' + sec.id + '-photo-wrap"><img src="' + sec.image + '" alt="' + sec.title + ' photo" /></div>'
-        : '<div class="section-photo-wrap placeholder" id="' + sec.id + '-photo-wrap"><span>Add a photo in the CMS</span></div>';
-    return '<div class="card" id="' + sec.id + '">'
-        + '<div class="card-header" onclick="toggle(this)">'
-        + '<div class="card-icon">' + sec.icon + '</div>'
-        + '<div class="card-text">'
-        + '<div class="card-category">' + sec.category + '</div>'
-        + '<div class="card-title">' + sec.title + '</div>'
-        + '</div>'
-        + '<div class="card-toggle"><svg viewBox="0 0 12 12"><polyline points="2,4 6,8 10,4"></polyline></svg></div>'
-        + '</div>'
-        + '<div class="card-body">'
-        + '<div class="location-pill"><span class="pin">📍</span><div class="loc-inner"><div class="loc-label">Location</div><div class="loc-text">' + sec.location + '</div></div></div>'
-        + tipsHtml
-        + notesHtml
-        + photoHtml
-        + '</div>'
-        + '</div>';
-}
-
-fetch('/_data/sections.json')
-    .then(function(r){ return r.json(); })
-    .then(function(data) {
-        var sections = data.sections || [];
-        var container = document.getElementById('sections-container');
-        var nav = document.getElementById('nav-chips');
-        sections.forEach(function(sec) {
-            container.innerHTML += buildCard(sec);
-            nav.innerHTML += '<a href="#' + sec.id + '">' + sec.title + '</a>';
-        });
-        nav.querySelectorAll('a').forEach(function(a) {
-            a.addEventListener('click', function() {
-                var t = document.querySelector(a.getAttribute('href'));
-                if (t) setTimeout(function(){ t.classList.add('open'); }, 180);
-            });
-        });
+fetch('/_data/properties-list.json')
+    .then(function(r){return r.json();})
+    .then(function(data){
+        var grid=document.getElementById('property-grid');
+        var props=data.properties||[];
+        if(!props.length){grid.innerHTML='<div class="empty">No properties found.</div>';return;}
+        grid.innerHTML=props.map(function(p){
+            var url='/property/?id='+p.slug;
+            return '<a class="property-card" href="'+url+'">'
+                +'<div class="prop-icon">🏠</div>'
+                +'<div class="prop-info">'
+                +'<div class="prop-address">'+p.address+'</div>'
+                +'<div class="prop-city">'+p.city+'</div>'
+                +'<div class="prop-url">'+url+'</div>'
+                +'</div>'
+                +'<div class="prop-arrow">›</div>'
+                +'</a>';
+        }).join('');
     })
-    .catch(function(err){ console.error('sections load error', err); });
-
-fetch('/_data/site.json')
-    .then(function(r){ return r.json(); })
-    .then(function(data) {
-        if (data.address) {
-            var el = document.getElementById('prop-address');
-            if (el) el.textContent = data.address;
-            var fe = document.getElementById('footer-address');
-            if (fe) fe.textContent = data.address;
-        }
-        if (data.city) {
-            var el = document.getElementById('prop-city');
-            if (el) el.textContent = data.city;
-        }
-    })
-    .catch(function(){});
+    .catch(function(){document.getElementById('property-grid').innerHTML='<div class="empty">Could not load properties.</div>';});
 </script>
 </body>
 </html>
