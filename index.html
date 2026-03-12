@@ -788,6 +788,14 @@
             var notesEl = sec.querySelector('.notes');
             if (notesEl) notesEl.textContent = data.notes;
           }
+                      // Update photo
+          if (data.image) {
+            var wrap = document.getElementById(id + '-photo-wrap');
+            if (wrap) {
+              wrap.classList.remove('placeholder');
+              wrap.innerHTML = '<img src="' + data.image + '" alt="' + id + ' photo" />';
+            }
+          }
         })
         .catch(function(){});
     }
