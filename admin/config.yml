@@ -1,15 +1,12 @@
 backend:
   name: git-gateway
   branch: main
-
 media_folder: "uploads"
 public_folder: "/uploads"
-
 collections:
   - name: "property"
     label: "Property Guide"
     files:
-
       - name: "site"
         label: "Site Settings (Address)"
         file: "_data/site.json"
@@ -17,67 +14,24 @@ collections:
           - { label: "Property Address", name: "address", widget: "string" }
           - { label: "City, State ZIP", name: "city", widget: "string" }
 
-      - name: "smoke"
-        label: "Smoke Alarm Location"
-        file: "_data/smoke.json"
+      - name: "sections"
+        label: "Sections"
+        file: "_data/sections.json"
         fields:
-          - { label: "Location Description", name: "location", widget: "text" }
-          - { label: "Photo", name: "image", widget: "image", required: false }
-          - label: "Tips"
-            name: "tips"
+          - label: "Sections"
+            name: "sections"
             widget: "list"
-            field: { label: "Tip", name: "tip", widget: "string" }
-
-      - name: "water-heater"
-        label: "Water Heater Location"
-        file: "_data/water-heater.json"
-        fields:
-          - { label: "Location Description", name: "location", widget: "text" }
-          - { label: "Photo", name: "image", widget: "image", required: false }
-          - { label: "Notes", name: "notes", widget: "text", required: false }
-
-      - name: "breaker"
-        label: "Circuit Breaker Location"
-        file: "_data/breaker.json"
-        fields:
-          - { label: "Location Description", name: "location", widget: "text" }
-          - { label: "Photo", name: "image", widget: "image", required: false }
-          - label: "Tips"
-            name: "tips"
-            widget: "list"
-            field: { label: "Tip", name: "tip", widget: "string" }
-
-      - name: "shutoff"
-        label: "Water Shut Off Location"
-        file: "_data/shutoff.json"
-        fields:
-          - { label: "Location Description", name: "location", widget: "text" }
-          - { label: "Photo", name: "image", widget: "image", required: false }
-          - { label: "Notes", name: "notes", widget: "text", required: false }
-
-      - name: "hvac"
-        label: "HVAC Filter Location"
-        file: "_data/hvac.json"
-        fields:
-          - { label: "Location Description", name: "location", widget: "text" }
-          - { label: "Photo", name: "image", widget: "image", required: false }
-          - label: "Tips"
-            name: "tips"
-            widget: "list"
-            field: { label: "Tip", name: "tip", widget: "string" }
-
-      - name: "meter"
-        label: "Electric Meter Location"
-        file: "_data/meter.json"
-        fields:
-          - { label: "Location Description", name: "location", widget: "text" }
-          - { label: "Photo", name: "image", widget: "image", required: false }
-          - { label: "Notes", name: "notes", widget: "text", required: false }
-
-      - name: "cameras"
-        label: "Camera System"
-        file: "_data/cameras.json"
-        fields:
-          - { label: "Camera Locations", name: "location", widget: "text" }
-          - { label: "Photo", name: "image", widget: "image", required: false }
-          - { label: "Notes", name: "notes", widget: "text", required: false }
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Section ID (no spaces, e.g. smoke)", name: "id", widget: "string" }
+              - { label: "Emoji Icon", name: "icon", widget: "string", default: "🏠" }
+              - { label: "Category Label", name: "category", widget: "string", default: "General" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Location Description", name: "location", widget: "text" }
+              - label: "Tips"
+                name: "tips"
+                widget: "list"
+                required: false
+                field: { label: "Tip", name: "tip", widget: "string" }
+              - { label: "Notes", name: "notes", widget: "text", required: false }
+              - { label: "Photo", name: "image", widget: "image", required: false }
