@@ -1,0 +1,16 @@
+{
+  "slug": "349NorthPope",
+  "address": "349 N. Pope St. ",
+  "city": "Athens, GA 30601",
+  "sections": [
+    {
+      "id": "Smoke Detector",
+      "tips": [
+        "Test"
+      ],
+      "notes": "Test",
+      "image": "/uploads/20260304_112728.jpg",
+      "location": "Test Description"
+    }
+  ]
+}
