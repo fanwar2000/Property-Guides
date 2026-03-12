@@ -10,6 +10,7 @@ collections:
     label_singular: "Property"
     folder: "_data/properties"
     create: true
+    identifier_field: "slug"
     slug: "{{slug}}"
     extension: "json"
     format: "json"
@@ -29,16 +30,17 @@ collections:
         fields:
           - { label: "Section ID", name: "id", widget: "string" }
           - { label: "Location Description", name: "location", widget: "text" }
-          - label: "Tips"
-            name: "tips"
-            widget: "list"
-            required: false
-            allow_add: true
-          - { label: "Notes", name: "notes", widget: "text", required: false }
-          - { label: "Photo", name: "image", widget: "image", required: false }
+      - label: "Tips"
+        name: "tips"
+        widget: "list"
+        required: false
+        summary: "{{fields.id}}"
+        fields:
+          - { label: "Section ID", name: "id", widget: "string" }
+          - { label: "Tip Text", name: "text", widget: "text" }
 
-  - name: "section_types"
-    label: "Section Types"
+  - name: "directory"
+    label: "Properties Directory"
     files:
       - name: "section_types"
         label: "Section Types"
@@ -54,9 +56,6 @@ collections:
               - { label: "Category", name: "category", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
 
-  - name: "directory"
-    label: "Properties Directory"
-    files:
       - name: "properties_list"
         label: "Properties Directory"
         file: "_data/properties-list.json"
