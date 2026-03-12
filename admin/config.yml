@@ -16,7 +16,10 @@ collections:
     summary: "{{address}}"
     preview_path: "property/?id={{slug}}"
     fields:
-      - { label: "Property URL Slug (no spaces, e.g. 1310-pete-dickens)", name: "slug", widget: "string" }
+      - label: "Property URL Slug"
+        name: "slug"
+        widget: "string"
+        hint: "Live URL: https://cityblockhomeguide.netlify.app/property/?id=YOUR-SLUG — use lowercase, dashes only (e.g. 1310-pete-dickens)"
       - { label: "Street Address", name: "address", widget: "string" }
       - { label: "City, State ZIP", name: "city", widget: "string" }
       - label: "Sections"
