@@ -22,6 +22,7 @@ collections:
         file: "_data/smoke.json"
         fields:
           - { label: "Location Description", name: "location", widget: "text" }
+          - { label: "Photo", name: "image", widget: "image", required: false }
           - label: "Tips"
             name: "tips"
             widget: "list"
@@ -32,6 +33,7 @@ collections:
         file: "_data/water-heater.json"
         fields:
           - { label: "Location Description", name: "location", widget: "text" }
+          - { label: "Photo", name: "image", widget: "image", required: false }
           - { label: "Notes", name: "notes", widget: "text", required: false }
 
       - name: "breaker"
@@ -39,6 +41,7 @@ collections:
         file: "_data/breaker.json"
         fields:
           - { label: "Location Description", name: "location", widget: "text" }
+          - { label: "Photo", name: "image", widget: "image", required: false }
           - label: "Tips"
             name: "tips"
             widget: "list"
@@ -49,6 +52,7 @@ collections:
         file: "_data/shutoff.json"
         fields:
           - { label: "Location Description", name: "location", widget: "text" }
+          - { label: "Photo", name: "image", widget: "image", required: false }
           - { label: "Notes", name: "notes", widget: "text", required: false }
 
       - name: "hvac"
@@ -56,6 +60,7 @@ collections:
         file: "_data/hvac.json"
         fields:
           - { label: "Location Description", name: "location", widget: "text" }
+          - { label: "Photo", name: "image", widget: "image", required: false }
           - label: "Tips"
             name: "tips"
             widget: "list"
@@ -66,6 +71,7 @@ collections:
         file: "_data/meter.json"
         fields:
           - { label: "Location Description", name: "location", widget: "text" }
+          - { label: "Photo", name: "image", widget: "image", required: false }
           - { label: "Notes", name: "notes", widget: "text", required: false }
 
       - name: "cameras"
@@ -73,4 +79,5 @@ collections:
         file: "_data/cameras.json"
         fields:
           - { label: "Camera Locations", name: "location", widget: "text" }
+          - { label: "Photo", name: "image", widget: "image", required: false }
           - { label: "Notes", name: "notes", widget: "text", required: false }
