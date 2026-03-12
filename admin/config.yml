@@ -32,6 +32,6 @@ collections:
                 name: "tips"
                 widget: "list"
                 required: false
-                field: { label: "Tip", name: "tip", widget: "string" }
+                allow_add: true
               - { label: "Notes", name: "notes", widget: "text", required: false }
               - { label: "Photo", name: "image", widget: "image", required: false }
