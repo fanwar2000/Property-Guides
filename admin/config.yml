@@ -31,6 +31,7 @@ collections:
         fields:
           - { label: "Section ID", name: "id", widget: "string" }
           - { label: "Location Description", name: "location", widget: "text" }
+          - { label: "Location Image", name: "image", widget: "image", required: false }
       - label: "Tips"
         name: "tips"
         widget: "list"
