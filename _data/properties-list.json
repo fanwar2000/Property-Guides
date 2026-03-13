@@ -4,6 +4,16 @@
       "slug": "1310-pete-dickens",
       "address": "1310 Pete Dickens Rd",
       "city": "Bogart, GA 30622"
+    },
+    {
+      "slug": "349-n-pope-st",
+      "address": "349 North Pope St.",
+      "city": "Athens, GA 30601"
+    },
+    {
+      "slug": "560-w-hancock",
+      "address": "560 W. Hancock Ave",
+      "city": "Athens, GA 30601"
     }
   ]
 }
