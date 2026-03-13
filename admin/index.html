@@ -7,6 +7,13 @@
   <title>Property Guide CMS</title>
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+      <style>
+      [class*="LoginPage"] [class*="CustomLogoIcon"],
+      [class*="LoginPage"] [class*="NetlifyLogoIcon"] { display: none !important; }
+      [class*="LoginPage"] [class*="CustomIconWrapper"]::before,
+      [class*="LoginPage"] [class*="LoginButton"]::before { content: ''; display: block; width: 300px; height: 68px; background: url('/logo.png') center/contain no-repeat; margin: 0 auto 20px; }
+      [class*="LoginPage"] [class*="LoginButton"]::before { display: none; }
+    </style>
 </head>
 <body>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
