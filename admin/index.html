@@ -8,18 +8,29 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <style>
-      #nc-root img[class] { max-height: 80px; }
+      .custom-logo-wrap { text-align: center; padding: 40px 0 20px; }
+      .custom-logo-wrap img { height: 60px; width: auto; }
     </style>
 </head>
 <body>
+    <div class="custom-logo-wrap"><img src="/logo.png" alt="CityBlock" /></div>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
     <script>
-    (function waitForLogo() {
-      var svg = document.querySelector('#nc-root svg');
-      if (!svg) return setTimeout(waitForLogo, 200);
-      var wrapper = svg.parentElement;
-      wrapper.innerHTML = '<img src="/logo.png" alt="CityBlock" style="height:80px;width:auto;" />';
-    })();
+    var observer = new MutationObserver(function() {
+      var el = document.querySelector('#nc-root svg, #nc-root img[src*="data:"]');
+      if (el) {
+        var container = el.closest('div');
+        while (container && container.id !== 'nc-root') {
+          if (container.querySelector('button')) {
+            container.querySelectorAll('svg, span, img[src*="data:"]').forEach(function(x) { x.style.display = 'none'; });
+            observer.disconnect();
+            break;
+          }
+          container = container.parentElement;
+        }
+      }
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
     </script>
 </body>
 </html>
