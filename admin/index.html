@@ -1,21 +1,25 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex" />
-  <title>Property Guide CMS</title>
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-      <style>
-      [class*="LoginPage"] [class*="CustomLogoIcon"],
-      [class*="LoginPage"] [class*="NetlifyLogoIcon"] { display: none !important; }
-      [class*="LoginPage"] [class*="CustomIconWrapper"]::before,
-      [class*="LoginPage"] [class*="LoginButton"]::before { content: ''; display: block; width: 300px; height: 68px; background: url('/logo.png') center/contain no-repeat; margin: 0 auto 20px; }
-      [class*="LoginPage"] [class*="LoginButton"]::before { display: none; }
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Property Guide CMS</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <style>
+      #nc-root img[class] { max-height: 80px; }
     </style>
 </head>
 <body>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+    (function waitForLogo() {
+      var svg = document.querySelector('#nc-root svg');
+      if (!svg) return setTimeout(waitForLogo, 200);
+      var wrapper = svg.parentElement;
+      wrapper.innerHTML = '<img src="/logo.png" alt="CityBlock" style="height:80px;width:auto;" />';
+    })();
+    </script>
 </body>
 </html>
