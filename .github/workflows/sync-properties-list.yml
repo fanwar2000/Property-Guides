@@ -1,0 +1,36 @@
+name: Sync Properties List
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '_data/properties/**'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate properties-list.json
+        run: |
+          python3 -c "
+          import json, glob, os
+          props = []
+          for f in sorted(glob.glob('_data/properties/*.json')):
+              with open(f) as fh:
+                  d = json.load(fh)
+                  props.append({'slug': d['slug'], 'address': d['address'], 'city': d['city']})
+          with open('_data/properties-list.json', 'w') as out:
+              json.dump({'properties': props}, out, indent=2)
+              out.write('\n')
+          "
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add _data/properties-list.json
+          git diff --cached --quiet || (git commit -m "Auto-update properties-list.json" && git push)
