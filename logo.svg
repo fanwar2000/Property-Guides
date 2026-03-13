@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80">
+  <defs>
+    <style>
+      .outline { fill: none; stroke: #FFFFFF; stroke-width: 2; }
+      .solid { fill: #FFFFFF; }
+    </style>
+  </defs>
+  <!-- C -->
+  <path class="outline" d="M38,8 C17,8 2,23 2,40 C2,57 17,72 38,72 C52,72 63,65 68,54" />
+  <!-- I -->
+  <rect class="outline" x="52" y="10" width="3" height="60" rx="1" />
+  <!-- T -->
+  <path class="outline" d="M64,10 L92,10 M78,10 L78,70" />
+  <!-- Y -->
+  <path class="outline" d="M96,10 L110,38 L124,10 M110,38 L110,70" />
+  <!-- B -->
+  <path class="solid" d="M136,10 L136,70 L160,70 C172,70 180,63 180,55 C180,48 175,43 168,42 C174,40 178,35 178,28 C178,18 170,10 158,10 Z M148,20 L156,20 C163,20 167,24 167,29 C167,34 163,38 156,38 L148,38 Z M148,46 L158,46 C166,46 170,50 170,56 C170,62 166,66 158,66 L148,66 Z" />
+  <!-- L -->
+  <path class="solid" d="M188,10 L188,70 L218,70 L218,60 L200,60 L200,10 Z" />
+  <!-- O with building -->
+  <circle class="solid" cx="245" cy="40" r="32" />
+  <circle fill="#003F5C" cx="245" cy="40" r="24" />
+  <!-- Building inside O -->
+  <g transform="translate(232,22)">
+    <rect fill="#FFFFFF" x="4" y="12" width="8" height="24" />
+    <rect fill="#FFFFFF" x="14" y="4" width="8" height="32" />
+    <line stroke="#003F5C" x1="6" y1="16" x2="10" y2="16" stroke-width="1" />
+    <line stroke="#003F5C" x1="6" y1="20" x2="10" y2="20" stroke-width="1" />
+    <line stroke="#003F5C" x1="6" y1="24" x2="10" y2="24" stroke-width="1" />
+    <line stroke="#003F5C" x1="6" y1="28" x2="10" y2="28" stroke-width="1" />
+    <line stroke="#003F5C" x1="16" y1="8" x2="20" y2="8" stroke-width="1" />
+    <line stroke="#003F5C" x1="16" y1="12" x2="20" y2="12" stroke-width="1" />
+    <line stroke="#003F5C" x1="16" y1="16" x2="20" y2="16" stroke-width="1" />
+    <line stroke="#003F5C" x1="16" y1="20" x2="20" y2="20" stroke-width="1" />
+    <line stroke="#003F5C" x1="16" y1="24" x2="20" y2="24" stroke-width="1" />
+    <line stroke="#003F5C" x1="16" y1="28" x2="20" y2="28" stroke-width="1" />
+  </g>
+  <!-- C -->
+  <path class="solid" d="M300,8 C282,8 270,22 270,40 C270,58 282,72 300,72 C312,72 322,65 326,54 L314,50 C312,57 307,62 300,62 C289,62 282,53 282,40 C282,27 289,18 300,18 C307,18 312,23 314,30 L326,26 C322,15 312,8 300,8 Z" />
+  <!-- K -->
+  <path class="solid" d="M336,10 L336,70 L348,70 L348,48 L366,70 L382,70 L360,44 L380,10 L366,10 L352,36 L348,30 L348,10 Z" />
+</svg>
