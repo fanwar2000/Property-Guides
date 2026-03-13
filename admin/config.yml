@@ -3,7 +3,7 @@ backend:
   branch: main
 media_folder: "uploads"
 public_folder: "/uploads"
-logo_url: "/logo-color.svg"
+logo_url: "/logo.png"
 collections:
 
   - name: "properties"
