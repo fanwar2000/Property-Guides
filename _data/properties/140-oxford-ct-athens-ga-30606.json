@@ -4,24 +4,34 @@
   "city": "Athens, GA 30606",
   "sections": [
     {
+      "id": "smoke-alarm",
+      "location": "Smoke alarms are located throughout the property. See image for specific locations. Test monthly using the detector's test button and replace batteries regularly.",
+      "image": "/uploads/smoke-alarm.jpg"
+    },
+    {
       "id": "water-heater",
-      "location": "Electric water heater located in kitchen closet."
+      "location": "Electric water heater located in kitchen closet.",
+      "image": "/uploads/water-heater.jpg"
     },
     {
       "id": "circuit-breaker",
-      "location": "Circuit breaker located behind door of front bedroom downstairs."
+      "location": "Circuit breaker located behind door of front bedroom downstairs.",
+      "image": "/uploads/circuit-breaker.jpg"
     },
     {
       "id": "water-shutoff",
-      "location": "Water meter is located near the road in front of the house. Look for two small blue lines on the curb indicating the water meter location."
+      "location": "Water meter is located near the road in front of the house. Look for two small blue lines on the curb indicating the water meter location.",
+      "image": "/uploads/water-shutoff.jpg"
     },
     {
       "id": "hvac-filter",
-      "location": "HVAC filter size is 12x12. Change filters quarterly: August, November, February, and May."
+      "location": "HVAC filter size is 12x12. Change filters quarterly: August, November, February, and May.",
+      "image": "/uploads/hvac-filter.jpg"
     },
     {
       "id": "fire-extinguisher",
-      "location": "Fire extinguisher is located under the kitchen sink."
+      "location": "Fire extinguisher is located under the kitchen sink.",
+      "image": "/uploads/fire-extinguisher.jpg"
     },
     {
       "id": "camera-system",
@@ -31,7 +41,7 @@
   "tips": [
     {
       "id": "laundry",
-      "text": "Do not wash large loads — this can cause the machine to be off balance. Clean the lint tray after EVERY use (fire hazard). Do not wash towels with clothes to prevent odors."
+      "text": "Do not wash large loads – this can cause the machine to be off balance. Clean the lint tray after EVERY use (fire hazard). Do not wash towels with clothes to prevent odors."
     },
     {
       "id": "bathrooms",
@@ -39,11 +49,11 @@
     },
     {
       "id": "heating-and-air",
-      "text": "Summer: Set thermostat no lower than 72°F (78°F optimal). Run ceiling fans and do NOT turn off the unit — turn the temp up instead. Winter: Set thermostat no higher than 68°F. Do NOT turn off units day or night — running heat prevents pipes from freezing. Change filters regularly."
+      "text": "Summer: Set thermostat no lower than 72°F (78°F optimal). Run ceiling fans and do NOT turn off the unit – turn the temp up instead. Winter: Set thermostat no higher than 68°F. Do NOT turn off units day or night – running heat prevents pipes from freezing. Change filters regularly."
     },
     {
       "id": "georgia-humidity",
-      "text": "Your HVAC system helps control humidity — keep it running and submit a work order if it's not working properly. If an area feels clammy or sticky, a room-sized dehumidifier can help remove excess moisture and prevent mold growth and allergens."
+      "text": "Your HVAC system helps control humidity – keep it running and submit a work order if it’s not working properly. If an area feels clammy or sticky, a room-sized dehumidifier can help remove excess moisture and prevent mold growth and allergens."
     }
   ]
 }
