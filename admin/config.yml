@@ -28,6 +28,14 @@ collections:
         name: "sections"
         widget: "list"
         summary: "{{fields.id}}"
+        default:
+          - { id: "Smoke Detector", location: "", image: "" }
+          - { id: "Water Heater", location: "", image: "" }
+          - { id: "Circuit Breaker", location: "", image: "" }
+          - { id: "Water Shutoff", location: "", image: "" }
+          - { id: "HVAC", location: "", image: "" }
+          - { id: "Water Meter", location: "", image: "" }
+          - { id: "Property Cameras", location: "", image: "" }
         fields:
           - { label: "Section ID", name: "id", widget: "string" }
           - { label: "Location Description", name: "location", widget: "text" }
@@ -40,7 +48,6 @@ collections:
         fields:
           - { label: "Section ID", name: "id", widget: "string" }
           - { label: "Tip Text", name: "text", widget: "text" }
-
   - name: "directory"
     label: "Properties Directory"
     files:
@@ -57,7 +64,6 @@ collections:
               - { label: "Emoji Icon", name: "icon", widget: "string" }
               - { label: "Category", name: "category", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
-
       - name: "properties_list"
         label: "Properties Directory"
         file: "_data/properties-list.json"
