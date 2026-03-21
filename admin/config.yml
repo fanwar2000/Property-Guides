@@ -80,11 +80,17 @@ collections:
         label: "Emergency Contacts"
         file: "_data/emergency-contacts.json"
         fields:
-          - label: "Contacts"
-            name: "contacts"
+          - label: "Sections"
+            name: "sections"
             widget: "list"
-            summary: "{{fields.name}}"
+            summary: "{{fields.title}}"
             fields:
-              - { label: "Contact Name", name: "name", widget: "string" }
-              - { label: "Phone Number", name: "phone", widget: "string" }
-              - { label: "Description", name: "description", widget: "string" }
+              - { label: "Section Title", name: "title", widget: "string" }
+              - label: "Contacts"
+                name: "contacts"
+                widget: "list"
+                summary: "{{fields.name}}"
+                fields:
+                  - { label: "Contact Name", name: "name", widget: "string" }
+                  - { label: "Phone Number", name: "phone", widget: "string" }
+                  - { label: "Description", name: "description", widget: "string" }
