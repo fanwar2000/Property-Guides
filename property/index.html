@@ -83,7 +83,7 @@ function buildCard(type, prop){
  var tips=prop.tips||[];
  var tipsHtml=tips.length?'<ul class="tips">'+tips.map(function(t,i){return'<li><span class="tip-num">'+(i+1)+'</span> '+t+'</li>';}).join('')+'</ul>':'';
  var notesHtml=prop.notes?'<p class="notes">'+prop.notes+'</p>':'';
- var photoHtml=prop.image?'<div class="section-photo-wrap"><img src="'+prop.image+'" alt="'+type.title+'" /></div>':'<div class="section-photo-wrap placeholder"><span>Add a photo in the CMS</span></div>';
+ var photoHtml=prop.image?'<div class="section-photo-wrap"><img src="'+prop.image+'" alt="'+type.title+'" /></div>':'';
  return '<div class="card" id="'+type.id+'">'
  +'<div class="card-header" onclick="toggle(this)">'
  +'<div class="card-icon">'+type.icon+'</div>'
