@@ -4,7 +4,7 @@
       "title": "Emergency",
       "contacts": [
         {
-          "name": "Emergency Services",
+          "name": "Fire",
           "phone": "911",
           "description": "Police, Fire, Medical Emergency"
         },
@@ -20,8 +20,13 @@
       "contacts": [
         {
           "name": "CityBlock Property Management",
-          "phone": "",
+          "phone": "555-555-5555",
           "description": "For maintenance requests and property inquiries"
+        },
+        {
+          "name": "Plumbing Emergency ",
+          "phone": "555-555-5555",
+          "description": "NA"
         }
       ]
     }
