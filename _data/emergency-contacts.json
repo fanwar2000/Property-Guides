@@ -1,19 +1,29 @@
 {
-  "contacts": [
+  "sections": [
     {
-      "name": "Emergency Services",
-      "phone": "911",
-      "description": "Police, Fire, Medical Emergency"
+      "title": "Emergency",
+      "contacts": [
+        {
+          "name": "Emergency Services",
+          "phone": "911",
+          "description": "Police, Fire, Medical Emergency"
+        },
+        {
+          "name": "Poison Control",
+          "phone": "1-800-222-1222",
+          "description": "National Poison Control Center"
+        }
+      ]
     },
     {
-      "name": "CityBlock Property Management",
-      "phone": "",
-      "description": "For maintenance requests and property inquiries"
-    },
-    {
-      "name": "Poison Control",
-      "phone": "1-800-222-1222",
-      "description": "National Poison Control Center"
+      "title": "Property Management",
+      "contacts": [
+        {
+          "name": "CityBlock Property Management",
+          "phone": "",
+          "description": "For maintenance requests and property inquiries"
+        }
+      ]
     }
   ]
 }
