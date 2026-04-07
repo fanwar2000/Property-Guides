@@ -3,17 +3,17 @@
     {
       "id": "Smoke Detector",
       "location": "Downstairs: Detector is located outside downstairs bathroom door. \n\nUpstairs: Detector is located outside master bedroom door. ",
-      "image": ""
+      "image": "/uploads/smoke-detector-dwnstrs-by-bath-1-.jpg"
     },
     {
       "id": "Water Heater",
       "location": "The water heater is located in the downstairs closet under the stairs. ",
-      "image": ""
+      "image": "/uploads/water-heater-downstairs-knobs-to-hot-water-1-.jpg"
     },
     {
       "id": "Circuit Breaker",
       "location": "The circuit breaker is located in the upstairs attic space which can be accessed through the master bedroom. When you enter the attic, its on the wall to your left.",
-      "image": ""
+      "image": "/uploads/circuit-breaker-in-upstairs-storage-room-1-.jpg"
     },
     {
       "id": "Water Shutoff",
@@ -37,11 +37,13 @@
     },
     {
       "id": "Thermostat",
-      "location": "The thermostat is located on the wall to the left of the downstairs bedroom entrance. "
+      "location": "The thermostat is located on the wall to the left of the downstairs bedroom entrance. ",
+      "image": "/uploads/thermostat-copy.jpg"
     },
     {
       "id": "Fire Extinguisher",
-      "location": "The fire extinguisher is located under the kitchen sink in the cabinets. "
+      "location": "The fire extinguisher is located under the kitchen sink in the cabinets. ",
+      "image": "/uploads/fire-extinguisher-under-sink-kitchen.jpg"
     }
   ],
   "address": "1012 Dash Drive ",
