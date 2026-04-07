@@ -14,6 +14,11 @@
       "slug": "560-w-hancock",
       "address": "560 W. Hancock Ave",
       "city": "Athens, GA 30601"
+    },
+    {
+      "slug": "https://cityblockhomeguide.netlify.app/property/?id=1012-dash-dr",
+      "address": "1012 Dash Drive ",
+      "city": "Watkinsville, GA 30677"
     }
   ]
 }
