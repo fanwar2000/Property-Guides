@@ -39,6 +39,11 @@
       "id": "Thermostat",
       "location": "Located in the downstairs hallway to the bedrooms. ",
       "image": "/uploads/thermostat-downstairs.jpg"
+    },
+    {
+      "id": "General House Care",
+      "location": "Test Description",
+      "image": "/uploads/20260304_112728.jpg"
     }
   ],
   "tips": [
