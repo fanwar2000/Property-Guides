@@ -124,20 +124,37 @@ else{
   fetch('/_data/properties/'+id+'.json').then(function(r){return r.json();}),
   fetch('/_data/emergency-contacts.json').then(function(r){return r.json();}).catch(function(){return {sections:[]};})
  ]).then(function(results){
-  var types=results[0].sections;
+  var types=(results[0]&&results[0].sections)||[];
   var prop=results[1];
   var emergencyData=results[2];
   document.title=prop.address+' - Property Guide';
   document.getElementById('prop-address').textContent=prop.address||'';
   document.getElementById('prop-city').textContent=prop.city||'';
   document.getElementById('footer-address').textContent=prop.address||'';
-  var propSections={};
-  (prop.sections||[]).forEach(function(s){propSections[s.id]=s;});
+  function norm(s){return String(s==null?'':s).toLowerCase().trim().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');}
+  var typesById={};
+  types.forEach(function(t){if(t&&t.id){typesById[norm(t.id)]=t;}});
+  var tipsById={};
+  (prop.tips||[]).forEach(function(t){
+   if(!t||!t.id) return;
+   var key=norm(t.id);
+   if(!tipsById[key]) tipsById[key]=[];
+   tipsById[key].push(t.text);
+  });
   var container=document.getElementById('sections-container');
   var nav=document.getElementById('nav-chips');
-  types.forEach(function(type){
-   var ps=propSections[type.id]||{};
-   container.innerHTML+=buildCard(type,ps);
+  (prop.sections||[]).forEach(function(ps){
+   if(!ps||!ps.id) return;
+   var key=norm(ps.id);
+   var matched=typesById[key];
+   var type={
+    id: matched?matched.id:key,
+    icon: (matched&&matched.icon)||'📋',
+    category: (matched&&matched.category)||'Property',
+    title: (matched&&matched.title)||ps.id
+   };
+   var sectionData={location:ps.location,image:ps.image,notes:ps.notes,tips:tipsById[key]||[]};
+   container.innerHTML+=buildCard(type,sectionData);
    nav.innerHTML+='<a href="#'+type.id+'">'+type.title+'</a>';
   });
   if(emergencyData&&emergencyData.sections&&emergencyData.sections.length){
