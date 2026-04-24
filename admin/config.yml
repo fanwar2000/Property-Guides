@@ -43,6 +43,13 @@ collections:
             hint: "Must match a Section Type id (e.g., smoke, water-heater, breaker, shutoff, hvac, meter, cameras, thermostat). Add the matching Section Type in the 'Section Types' collection before adding a new id here."
           - { label: "Location Description", name: "location", widget: "text" }
           - { label: "Location Image", name: "image", widget: "image", required: false }
+          - label: "Additional Images"
+            name: "images"
+            widget: "list"
+            required: false
+            summary: "{{fields.image}}"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
       - label: "Tips"
         name: "tips"
         widget: "list"
