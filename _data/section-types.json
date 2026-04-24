@@ -6,6 +6,7 @@
     { "id": "shutoff",     "icon": "🚰", "category": "Emergency",   "title": "Water Shut Off Location" },
     { "id": "hvac",        "icon": "💨", "category": "Maintenance", "title": "HVAC Filter Location" },
     { "id": "meter",       "icon": "🔌", "category": "Utilities",   "title": "Electric Meter Location" },
-    { "id": "cameras",     "icon": "📷", "category": "Security",    "title": "Camera System" }
+    { "id": "cameras",     "icon": "📷", "category": "Security",    "title": "Camera System" },
+    { "id": "general-house-care", "icon": "🏠", "category": "Maintenance", "title": "General House Care" }
   ]
 }
