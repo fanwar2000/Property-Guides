@@ -29,15 +29,18 @@ collections:
         widget: "list"
         summary: "{{fields.id}}"
         default:
-          - { id: "Smoke Detector", location: "", image: "" }
-          - { id: "Water Heater", location: "", image: "" }
-          - { id: "Circuit Breaker", location: "", image: "" }
-          - { id: "Water Shutoff", location: "", image: "" }
-          - { id: "HVAC", location: "", image: "" }
-          - { id: "Water Meter", location: "", image: "" }
-          - { id: "Property Cameras", location: "", image: "" }
+          - { id: "smoke", location: "", image: "" }
+          - { id: "water-heater", location: "", image: "" }
+          - { id: "breaker", location: "", image: "" }
+          - { id: "shutoff", location: "", image: "" }
+          - { id: "hvac", location: "", image: "" }
+          - { id: "meter", location: "", image: "" }
+          - { id: "cameras", location: "", image: "" }
         fields:
-          - { label: "Section ID", name: "id", widget: "string" }
+          - label: "Section ID"
+            name: "id"
+            widget: "string"
+            hint: "Must match a Section Type id (e.g., smoke, water-heater, breaker, shutoff, hvac, meter, cameras, thermostat). Add the matching Section Type in the 'Section Types' collection before adding a new id here."
           - { label: "Location Description", name: "location", widget: "text" }
           - { label: "Location Image", name: "image", widget: "image", required: false }
       - label: "Tips"
