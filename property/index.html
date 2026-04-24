@@ -79,15 +79,16 @@ footer strong { color:var(--blue-dark); font-weight:700; }
  </div></header><div class="header-stripe"></div><main class="content" id="sections-container"></main><footer>Questions? Contact your property manager.<br /><strong id="footer-address"></strong></footer>
 <script>
 function toggle(h){h.closest('.card').classList.toggle('open');}
-function buildCard(type, prop){
- var tips=prop.tips||[];
- var tipsHtml=tips.length?'<ul class="tips">'+tips.map(function(t,i){return'<li><span class="tip-num">'+(i+1)+'</span> '+t+'</li>';}).join('')+'</ul>':'';
+function slugify(s){return String(s||'').trim().toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');}
+function buildCard(type, prop, tipsForSection){
+ var tips=tipsForSection||[];
+ var tipsHtml=tips.length?'<ul class="tips">'+tips.map(function(t,i){return'<li><span class="tip-num">'+(i+1)+'</span> '+(t.text||'')+'</li>';}).join('')+'</ul>':'';
  var notesHtml=prop.notes?'<p class="notes">'+prop.notes+'</p>':'';
  var photoHtml=prop.image?'<div class="section-photo-wrap"><img src="'+prop.image+'" alt="'+type.title+'" /></div>':'';
  return '<div class="card" id="'+type.id+'">'
  +'<div class="card-header" onclick="toggle(this)">'
- +'<div class="card-icon">'+type.icon+'</div>'
- +'<div class="card-text"><div class="card-category">'+type.category+'</div><div class="card-title">'+type.title+'</div></div>'
+ +'<div class="card-icon">'+(type.icon||'🏠')+'</div>'
+ +'<div class="card-text"><div class="card-category">'+(type.category||'Property')+'</div><div class="card-title">'+type.title+'</div></div>'
  +'<div class="card-toggle"><svg viewBox="0 0 12 12"><polyline points="2,4 6,8 10,4"></polyline></svg></div>'
  +'</div>'
  +'<div class="card-body"><div class="location-pill"><span class="pin">&#x1F4CD;</span><div class="loc-inner"><div class="loc-label">Location</div><div class="loc-text">'+(prop.location||'Location not set')+'</div></div></div>'
@@ -131,14 +132,20 @@ else{
   document.getElementById('prop-address').textContent=prop.address||'';
   document.getElementById('prop-city').textContent=prop.city||'';
   document.getElementById('footer-address').textContent=prop.address||'';
-  var propSections={};
-  (prop.sections||[]).forEach(function(s){propSections[s.id]=s;});
+  var typeMap={};
+  types.forEach(function(t){typeMap[t.id]=t;typeMap[slugify(t.id)]=t;if(t.title)typeMap[slugify(t.title)]=typeMap[slugify(t.title)]||t;});
+  var tipsBySection={};
+  (prop.tips||[]).forEach(function(tp){var k=slugify(tp.id);if(!tipsBySection[k])tipsBySection[k]=[];tipsBySection[k].push(tp);});
   var container=document.getElementById('sections-container');
   var nav=document.getElementById('nav-chips');
-  types.forEach(function(type){
-   var ps=propSections[type.id]||{};
-   container.innerHTML+=buildCard(type,ps);
-   nav.innerHTML+='<a href="#'+type.id+'">'+type.title+'</a>';
+  (prop.sections||[]).forEach(function(ps){
+   var rawId=ps.id||'';
+   var slug=slugify(rawId);
+   var type=typeMap[rawId]||typeMap[slug]||{id:slug||'section',icon:'🏠',category:'Property',title:String(rawId).trim()||'Section'};
+   var renderType={id:slug||type.id,icon:type.icon,category:type.category,title:type.title};
+   var tipsForSection=tipsBySection[slug]||tipsBySection[rawId]||[];
+   container.innerHTML+=buildCard(renderType,ps,tipsForSection);
+   nav.innerHTML+='<a href="#'+renderType.id+'">'+renderType.title+'</a>';
   });
   if(emergencyData&&emergencyData.sections&&emergencyData.sections.length){
    container.innerHTML+=buildEmergencySection(emergencyData.sections);
