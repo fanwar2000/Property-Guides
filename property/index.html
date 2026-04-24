@@ -85,6 +85,7 @@ function buildCard(type, prop, tipsForSection){
  var tipsHtml=tips.length?'<ul class="tips">'+tips.map(function(t,i){return'<li><span class="tip-num">'+(i+1)+'</span> '+(t.text||'')+'</li>';}).join('')+'</ul>':'';
  var notesHtml=prop.notes?'<p class="notes">'+prop.notes+'</p>':'';
  var photoHtml=prop.image?'<div class="section-photo-wrap"><img src="'+prop.image+'" alt="'+type.title+'" /></div>':'';
+ var extraImages=(prop.images||[]).map(function(it){var u=(it&&it.image)?it.image:(typeof it==='string'?it:'');return u?'<div class="section-photo-wrap"><img src="'+u+'" alt="'+type.title+'" /></div>':'';}).join('');
  return '<div class="card" id="'+type.id+'">'
  +'<div class="card-header" onclick="toggle(this)">'
  +'<div class="card-icon">'+(type.icon||'🏠')+'</div>'
@@ -92,7 +93,7 @@ function buildCard(type, prop, tipsForSection){
  +'<div class="card-toggle"><svg viewBox="0 0 12 12"><polyline points="2,4 6,8 10,4"></polyline></svg></div>'
  +'</div>'
  +'<div class="card-body"><div class="location-pill"><span class="pin">&#x1F4CD;</span><div class="loc-inner"><div class="loc-label">Location</div><div class="loc-text">'+(prop.location||'Location not set')+'</div></div></div>'
- +tipsHtml+notesHtml+photoHtml
+ +tipsHtml+notesHtml+photoHtml+extraImages
  +'</div></div>';
 }
 function buildEmergencySection(sections){
