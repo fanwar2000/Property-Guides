@@ -4,59 +4,59 @@
   "city": "Athens, GA 30601",
   "sections": [
     {
-      "id": "Smoke Detector ",
-      "location": "Located in each of the bedrooms as well as the hallways outside the bedrooms. ",
+      "id": "smoke",
+      "location": "Located in each of the bedrooms as well as the hallways outside the bedrooms.",
       "image": ""
     },
     {
-      "id": "Water Heater",
-      "location": "Located in attic closet upstairs across from the washer and dryer. ",
+      "id": "water-heater",
+      "location": "Located in attic closet upstairs across from the washer and dryer.",
       "image": ""
     },
     {
-      "id": "Circuit Breaker",
-      "location": "Located to the right of the attic closet upstairs. ",
+      "id": "breaker",
+      "location": "Located to the right of the attic closet upstairs.",
       "image": "/uploads/circuit-breaker-upstairs.jpg"
     },
     {
-      "id": "Water Shut Off",
-      "location": "The main water shut off is located in the grass near the mailbox. Look for the lid labeled \"water meter\" ",
+      "id": "shutoff",
+      "location": "The main water shut off is located in the grass near the mailbox. Look for the lid labeled \"water meter\"",
       "image": "/uploads/20260124_162913-1-.jpg"
     },
     {
-      "id": "HVAC ",
-      "location": "The HVAC system is located beneath the house. "
+      "id": "hvac",
+      "location": "The HVAC system is located beneath the house."
     },
     {
-      "id": "Electric Meter ",
-      "location": "Located around the left side of the house on the siding. "
+      "id": "meter",
+      "location": "Located around the left side of the house on the siding."
     },
     {
-      "id": "Cameras",
-      "location": "We do not use cameras at this property. "
+      "id": "cameras",
+      "location": "We do not use cameras at this property."
     },
     {
-      "id": "Thermostat",
-      "location": "Located in the downstairs hallway to the bedrooms. ",
+      "id": "thermostat",
+      "location": "Located in the downstairs hallway to the bedrooms.",
       "image": "/uploads/thermostat-downstairs.jpg"
     },
     {
-      "id": "General House Care 2",
+      "id": "general-house-care-2",
       "location": "Test Description",
       "image": "/uploads/20260304_112728.jpg"
     }
   ],
   "tips": [
     {
-      "id": "Smoke Detectors ",
-      "text": "Test smoke detectors at least once a month using the test button.\n\nChange batteries when smoke detector beeps. "
+      "id": "smoke",
+      "text": "Test smoke detectors at least once a month using the test button.\n\nChange batteries when smoke detector beeps."
     },
     {
-      "id": "Circuit Breaker",
+      "id": "breaker",
       "text": "If a breaker trips, switch it fully OFF then back ON to reset."
     },
     {
-      "id": "HVAC",
+      "id": "hvac",
       "text": "Replace the filter every 60-90 days, or more often if you have pets."
     }
   ]
