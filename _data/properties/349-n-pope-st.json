@@ -25,7 +25,8 @@
     },
     {
       "id": "hvac",
-      "location": "The HVAC system is located beneath the house."
+      "location": "The HVAC system is located beneath the house.",
+      "images": []
     },
     {
       "id": "meter",
