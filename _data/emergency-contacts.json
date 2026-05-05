@@ -27,6 +27,16 @@
           "name": "Emergency Plumbing (Smith Plumbing Sol.)",
           "phone": "706-395-6805",
           "description": "**If you schedule a service, you will be responsible for the costs** Emergency Pricing: $380/First hour + $285/each additional hour"
+        },
+        {
+          "name": "HVAC (Hale's Heating and Cooling)",
+          "phone": "706-765-7219",
+          "description": "After Hours (past 6 pm) and weekend calls start at $175/hour."
+        },
+        {
+          "name": "HVAC (Stiles)",
+          "phone": "706-548-1328",
+          "description": "After hours services start at $175/hour."
         }
       ]
     },
