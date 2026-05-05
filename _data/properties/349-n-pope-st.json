@@ -6,7 +6,18 @@
     {
       "id": "smoke",
       "location": "Located in each of the bedrooms as well as the hallways outside the bedrooms.",
-      "image": ""
+      "image": "/uploads/smoke-detector-dwnstrs-left-bedrm2.jpg",
+      "images": [
+        {
+          "image": "/uploads/smoke-detector-upstairs-hallway.jpg"
+        },
+        {
+          "image": "/uploads/smoke-detector-upstairs-left-bdrm.jpg"
+        },
+        {
+          "image": "/uploads/smoke-detector-upstairs-right-bdrm.jpg"
+        }
+      ]
     },
     {
       "id": "water-heater",
@@ -44,7 +55,7 @@
     {
       "id": "general-house-care-2",
       "location": "Test Description",
-      "image": "/uploads/20260304_112728.jpg"
+      "image": ""
     }
   ],
   "tips": [
