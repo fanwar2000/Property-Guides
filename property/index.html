@@ -70,7 +70,7 @@ body { font-family: 'Montserrat', sans-serif; background: var(--bg); color: var(
 footer { text-align:center; padding:24px 24px 40px; font-size:0.75rem; font-weight:500; color:#94B8CC; letter-spacing:0.04em; line-height:1.8; }
 footer strong { color:var(--blue-dark); font-weight:700; }
 @media(max-width:440px){.header-inner{padding:34px 18px 30px;}.content{padding:18px 12px 60px;}}
-    </style></head><body><header class="header"> <div class="header-inner">
+    .section-links { margin-top:14px; display:flex; flex-direction:column; gap:8px; }.section-links-label { font-size:9px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:var(--blue); margin-bottom:2px; padding-left:2px; }.section-link { display:flex; align-items:center; gap:10px; background:var(--white); border:1px solid var(--border); border-radius:10px; padding:11px 14px; text-decoration:none; color:var(--ink); font-size:0.85rem; font-weight:600; transition:box-shadow 0.2s, border-color 0.2s; }.section-link:hover { box-shadow:0 2px 12px rgba(0,100,160,0.10); border-color:var(--blue-mid); }.section-link-icon { width:28px; height:28px; border-radius:50%; background:var(--blue-light); display:flex; align-items:center; justify-content:center; font-size:13px; flex-shrink:0; color:var(--blue-dark); }.section-link-label { flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }.section-link-ext { font-size:11px; color:var(--ink-soft); flex-shrink:0; }.caution-box { display:flex; align-items:flex-start; gap:14px; background:#FFF8E1; border:1px solid #FFD422; border-left:5px solid #E6A800; border-radius:12px; padding:14px 16px; margin-bottom:16px; }.caution-icon { font-size:24px; line-height:1; flex-shrink:0; margin-top:1px; }.caution-text { flex:1; font-size:0.85rem; font-weight:600; color:#5C4500; line-height:1.4; white-space:pre-wrap; }</style></head><body><header class="header"> <div class="header-inner">
  <div class="header-logo"><img src="/logo.png" alt="CityBlock" /></div>
  <div class="header-welcome">Welcome to</div>
  <div class="header-address" id="prop-address">Loading...</div>
@@ -86,20 +86,23 @@ function buildCard(type, prop, tipsForSection){
  var notesHtml=prop.notes?'<p class="notes">'+prop.notes+'</p>':'';
  var photoHtml=prop.image?'<div class="section-photo-wrap"><img src="'+prop.image+'" alt="'+type.title+'" /></div>':'';
  var extraImages=(prop.images||[]).map(function(it){var u=(it&&it.image)?it.image:(typeof it==='string'?it:'');return u?'<div class="section-photo-wrap"><img src="'+u+'" alt="'+type.title+'" /></div>':'';}).join('');
+ var linksHtml=(prop.links||[]).filter(function(l){return l&&l.url;}).map(function(l){var lbl=(l.label&&l.label.trim())||l.url;return '<a class="section-link" href="'+l.url+'" target="_blank" rel="noopener noreferrer"><span class="section-link-icon">&#x1F517;</span><span class="section-link-label">'+lbl+'</span><span class="section-link-ext">&#x2197;</span></a>';}).join('');
+ var linksBlock=linksHtml?'<div class="section-links"><div class="section-links-label">Links</div>'+linksHtml+'</div>':'';
  return '<div class="card" id="'+type.id+'">'
  +'<div class="card-header" onclick="toggle(this)">'
- +'<div class="card-icon">'+(type.icon||'🏠')+'</div>'
+ +'<div class="card-icon">'+(type.icon||'ð ')+'</div>'
  +'<div class="card-text"><div class="card-category">'+(type.category||'Property')+'</div><div class="card-title">'+type.title+'</div></div>'
  +'<div class="card-toggle"><svg viewBox="0 0 12 12"><polyline points="2,4 6,8 10,4"></polyline></svg></div>'
  +'</div>'
  +'<div class="card-body"><div class="location-pill"><span class="pin">&#x1F4CD;</span><div class="loc-inner"><div class="loc-label">Location</div><div class="loc-text">'+(prop.location||'Location not set')+'</div></div></div>'
- +tipsHtml+notesHtml+photoHtml+extraImages
+ +tipsHtml+notesHtml+photoHtml+extraImages+linksBlock
  +'</div></div>';
 }
-function buildEmergencySection(sections){
+function buildEmergencySection(sections, caution){
  if(!sections||!sections.length) return '';
  var html='<div class="emergency-section" id="emergency-contacts">';
  html+='<div class="emergency-section-title">Emergency Contacts</div>';
+ if(caution && String(caution).trim()){ html+='<div class="caution-box"><div class="caution-icon">&#x26A0;&#xFE0F;</div><div class="caution-text">'+String(caution)+'</div></div>'; }
  sections.forEach(function(sec){
   html+='<div class="emergency-subsection">';
   if(sec.title) html+='<div class="emergency-subsection-title">'+sec.title+'</div>';
@@ -142,14 +145,14 @@ else{
   (prop.sections||[]).forEach(function(ps){
    var rawId=ps.id||'';
    var slug=slugify(rawId);
-   var type=typeMap[rawId]||typeMap[slug]||{id:slug||'section',icon:'🏠',category:'Property',title:String(rawId).trim()||'Section'};
+   var type=typeMap[rawId]||typeMap[slug]||{id:slug||'section',icon:'ð ',category:'Property',title:String(rawId).trim()||'Section'};
    var renderType={id:slug||type.id,icon:type.icon,category:type.category,title:type.title};
    var tipsForSection=tipsBySection[slug]||tipsBySection[rawId]||[];
    container.innerHTML+=buildCard(renderType,ps,tipsForSection);
    nav.innerHTML+='<a href="#'+renderType.id+'">'+renderType.title+'</a>';
   });
   if(emergencyData&&emergencyData.sections&&emergencyData.sections.length){
-   container.innerHTML+=buildEmergencySection(emergencyData.sections);
+   container.innerHTML+=buildEmergencySection(emergencyData.sections, emergencyData.caution_statement);
    nav.innerHTML+='<a href="#emergency-contacts">Emergency Contacts</a>';
   }
   nav.querySelectorAll('a').forEach(function(a){
