@@ -45,14 +45,14 @@
       "title": "Property Management",
       "contacts": [
         {
+          "name": "CityBlock Maintenance",
+          "phone": "620-254-0540",
+          "description": "Contact for Emergency and non-emergency maintenance coordination."
+        },
+        {
           "name": "CityBlock Properties Management",
           "phone": "678-661-1347",
           "description": "For maintenance requests and property inquiries, call and text the number above. You must also create a work order through your online portal. "
-        },
-        {
-          "name": "CityBlock Maintenance",
-          "phone": "620-254-0540",
-          "description": "Contact for non-emergency maintenance coordination."
         }
       ]
     }
