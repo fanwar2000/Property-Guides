@@ -145,7 +145,7 @@ else{
   (prop.sections||[]).forEach(function(ps){
    var rawId=ps.id||'';
    var slug=slugify(rawId);
-   var type=typeMap[rawId]||typeMap[slug]||{id:slug||'section',icon:'ð ',category:'Property',title:String(rawId).trim()||'Section'};
+   var type=typeMap[rawId]||typeMap[slug]||{id:slug||'section',icon:'🏠',category:'Property',title:String(rawId).trim()||'Section'};
    var renderType={id:slug||type.id,icon:type.icon,category:type.category,title:type.title};
    var tipsForSection=tipsBySection[slug]||tipsBySection[rawId]||[];
    container.innerHTML+=buildCard(renderType,ps,tipsForSection);
