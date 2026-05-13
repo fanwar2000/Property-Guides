@@ -48,11 +48,6 @@
           "name": "CityBlock Property Management",
           "phone": "678-661-1347",
           "description": "For maintenance requests and property inquiries, call and text the number above. You must also create a work order through your online portal. "
-        },
-        {
-          "name": "Test",
-          "phone": "Test",
-          "description": "Test"
         }
       ]
     }
