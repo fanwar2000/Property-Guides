@@ -99,11 +99,6 @@ collections:
         label: "Emergency Contacts"
         file: "_data/emergency-contacts.json"
         fields:
-          - label: "Caution Statement (shown above Emergency Contacts on every property)"
-            name: "caution_statement"
-            widget: "text"
-            required: false
-            hint: "Optional global warning displayed under a ⚠️ icon above the Emergency Contacts list."
           - label: "Sections"
             name: "sections"
             widget: "list"
@@ -118,3 +113,8 @@ collections:
                   - { label: "Contact Name", name: "name", widget: "string" }
                   - { label: "Phone Number", name: "phone", widget: "string" }
                   - { label: "Description", name: "description", widget: "string" }
+          - label: "Caution Statement (shown above Emergency Contacts on every property)"
+            name: "caution_statement"
+            widget: "text"
+            required: false
+            hint: "Optional global warning displayed under a â ï¸ icon above the Emergency Contacts list."
