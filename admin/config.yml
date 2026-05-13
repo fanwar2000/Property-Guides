@@ -50,6 +50,15 @@ collections:
             summary: "{{fields.image}}"
             fields:
               - { label: "Image", name: "image", widget: "image" }
+          - label: "Links"
+            name: "links"
+            widget: "list"
+            required: false
+            summary: "{{fields.label}}"
+            hint: "Optional clickable links for this section (e.g., user manuals, vendor pages, instructional videos)."
+            fields:
+              - { label: "Link Label", name: "label", widget: "string" }
+              - { label: "Link URL", name: "url", widget: "string" }
       - label: "Tips"
         name: "tips"
         widget: "list"
@@ -90,6 +99,11 @@ collections:
         label: "Emergency Contacts"
         file: "_data/emergency-contacts.json"
         fields:
+          - label: "Caution Statement (shown above Emergency Contacts on every property)"
+            name: "caution_statement"
+            widget: "text"
+            required: false
+            hint: "Optional global warning displayed under a ⚠️ icon above the Emergency Contacts list."
           - label: "Sections"
             name: "sections"
             widget: "list"
