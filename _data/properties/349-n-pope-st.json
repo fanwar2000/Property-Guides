@@ -4,6 +4,10 @@
   "city": "Athens, GA 30601",
   "sections": [
     {
+      "id": "CityBlock Maintenance Contact",
+      "location": "620-254-0540"
+    },
+    {
       "id": "smoke",
       "location": "Located in each of the bedrooms as well as the hallways outside the bedrooms.",
       "image": "/uploads/smoke-detector-dwnstrs-left-bedrm2.jpg",
