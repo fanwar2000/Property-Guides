@@ -7,17 +7,7 @@
       "id": "smoke",
       "location": "Located in each of the bedrooms as well as the hallways outside the bedrooms.",
       "image": "/uploads/smoke-detector-dwnstrs-left-bedrm2.jpg",
-      "images": [
-        {
-          "image": "/uploads/smoke-detector-upstairs-hallway.jpg"
-        },
-        {
-          "image": "/uploads/smoke-detector-upstairs-left-bdrm.jpg"
-        },
-        {
-          "image": "/uploads/smoke-detector-upstairs-right-bdrm.jpg"
-        }
-      ]
+      "images": []
     },
     {
       "id": "water-heater",
