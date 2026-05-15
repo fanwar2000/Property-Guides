@@ -2,6 +2,11 @@
   "properties": [
     {
       "slug": "349-n-pope-st",
+      "address": "140 Oxford Court",
+      "city": "Athens, GA 30601"
+    },
+    {
+      "slug": "349-n-pope-st",
       "address": "349 North Pope St.",
       "city": "Athens, GA 30601"
     }
