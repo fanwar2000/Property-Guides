@@ -1,0 +1,101 @@
+{
+  "slug": "349-n-pope-st",
+  "address": "140 Oxford Court",
+  "city": "Athens, GA 30601",
+  "sections": [
+    {
+      "id": "smoke",
+      "location": "Located in each of the bedrooms as well as the hallways outside the bedrooms.",
+      "image": "/uploads/img_6150.jpg",
+      "images": [
+        {
+          "image": "/uploads/img_6167.jpg"
+        },
+        {
+          "image": "/uploads/img_6139-1-.jpg"
+        },
+        {
+          "image": "/uploads/img_6140-1-.jpg"
+        }
+      ]
+    },
+    {
+      "id": "water-heater",
+      "location": "Located in attic closet upstairs across from the washer and dryer.",
+      "image": ""
+    },
+    {
+      "id": "breaker",
+      "location": "Located to the right of the attic closet upstairs.",
+      "image": "/uploads/circuit-breaker-upstairs.jpg",
+      "images": [
+        {
+          "image": "/uploads/img_6170.jpg"
+        }
+      ]
+    },
+    {
+      "id": "shutoff",
+      "location": "The main water shut off is located in the grass near the mailbox. Look for the lid labeled \"water meter\"",
+      "image": "/uploads/20260124_162913-1-.jpg",
+      "images": [
+        {
+          "image": "/uploads/img_6078.jpg"
+        }
+      ]
+    },
+    {
+      "id": "hvac",
+      "location": "The HVAC system is located beneath the house.",
+      "images": []
+    },
+    {
+      "id": "meter",
+      "location": "Located around the left side of the house on the siding.",
+      "image": "/uploads/img_6075.jpg"
+    },
+    {
+      "id": "cameras",
+      "location": "There are cameras around the exterior of the property.",
+      "image": "/uploads/img_6175.jpg",
+      "images": [
+        {
+          "image": "/uploads/img_6174.jpg"
+        },
+        {
+          "image": "/uploads/img_6173.jpg"
+        }
+      ]
+    },
+    {
+      "id": "thermostat",
+      "location": "Located in the downstairs hallway to the bedrooms.",
+      "image": "/uploads/thermostat-downstairs.jpg"
+    },
+    {
+      "id": "general-house-care-",
+      "location": "None",
+      "image": "",
+      "links": [
+        {
+          "label": "Tenant Resources",
+          "url": "https://cbpresinfo.lovable.app/ "
+        }
+      ]
+    }
+  ],
+  "tips": [
+    {
+      "id": "smoke",
+      "text": "Test smoke detectors at least once a month using the test button.\n\nChange batteries when smoke detector beeps."
+    },
+    {
+      "id": "breaker",
+      "text": "If a breaker trips, switch it fully OFF then back ON to reset."
+    },
+    {
+      "id": "hvac",
+      "text": "Replace the filter every 60-90 days, or more often if you have pets."
+    }
+  ]
+}
