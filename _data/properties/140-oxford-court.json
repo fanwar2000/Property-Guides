@@ -6,18 +6,27 @@
     {
       "id": "smoke",
       "location": "Smoke alarm is located in the living room area near the front door (ceiling mounted), and in the upstairs hallway at the top of the stairs.",
-      "image": "",
-      "images": []
+      "image": "/uploads/140_air_filter-smoke_alarms_2.jpg",
+      "images": [
+        {
+          "image": "/uploads/smoke_alarm_3_140.jpg"
+        }
+      ]
     },
     {
       "id": "water-heater",
       "location": "Electric water heater (Rheem EverKleen) is located in the kitchen closet.",
-      "image": ""
+      "image": "/uploads/140_water_heater.jpg",
+      "images": [
+        {
+          "image": "/uploads/140_kitchen_view.jpg"
+        }
+      ]
     },
     {
       "id": "breaker",
       "location": "Circuit breaker panel is located on the wall behind the door of the front bedroom downstairs.",
-      "image": "",
+      "image": "/uploads/140_circuit_breaker.jpg",
       "images": []
     },
     {
@@ -29,7 +38,8 @@
     {
       "id": "hvac",
       "location": "HVAC filter is located in the ceiling vent at the top of the stairs in the upstairs hallway. Filter size is 12x12. Change in August, November, February, and May.",
-      "images": []
+      "images": [],
+      "image": "/uploads/140_air_filter_1.jpg"
     },
     {
       "id": "meter",
@@ -50,7 +60,7 @@
     {
       "id": "general-house-care-",
       "location": "Fire extinguisher is located under the kitchen sink. Garbage disposal (InSinkErator Badger 5) is under the kitchen sink. Clean lint trap after every dryer use — FIRE HAZARD. Do not wash large loads. Do not wash towels with clothes. Run bathroom vent fan for at least 15 minutes after showering. Leave bathroom doors open to air out. Remove hair from drain daily.",
-      "image": "",
+      "image": "/uploads/fire_extenguisher_140.jpg",
       "links": [
         {
           "label": "Tenant Resources",
