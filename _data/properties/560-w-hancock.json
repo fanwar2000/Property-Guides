@@ -1,0 +1,76 @@
+{
+  "slug": "560-w-hancock",
+  "address": "560 W Hancock Ave",
+  "city": "Athens, GA 30601",
+  "sections": [
+    {
+      "id": "smoke",
+      "location": "Smoke detectors are located outside the bedroom doors and in the kitchen.",
+      "image": "/uploads/img_2407-1-.jpg",
+      "images": []
+    },
+    {
+      "id": "water-heater",
+      "location": "The water heater is located below the house in a crawl space. ",
+      "image": "/uploads/water-heater-1-.jpg"
+    },
+    {
+      "id": "breaker",
+      "location": "None",
+      "image": "",
+      "images": []
+    },
+    {
+      "id": "shutoff",
+      "location": "The water shut off is located by the curb at the end of the driveway. It will have a metal lid labeled \"water\".",
+      "image": "/uploads/meter-2.jpg",
+      "images": []
+    },
+    {
+      "id": "hvac",
+      "location": "none",
+      "images": []
+    },
+    {
+      "id": "meter",
+      "location": "The electric meter is usually located on the exterior of the house. ",
+      "image": ""
+    },
+    {
+      "id": "cameras",
+      "location": "There are no cameras at this property.",
+      "image": "",
+      "images": []
+    },
+    {
+      "id": "thermostat",
+      "location": "The thermostat is on first floor located near the stairs on the wall. ",
+      "image": "/uploads/img_2300-1-.jpg"
+    },
+    {
+      "id": "general-house-care-",
+      "location": "None",
+      "image": "",
+      "links": [
+        {
+          "label": "Tenant Resources",
+          "url": "https://cbpresinfo.lovable.app/ "
+        }
+      ]
+    }
+  ],
+  "tips": [
+    {
+      "id": "smoke",
+      "text": "Test smoke detectors at least once a month using the test button.\n\nChange batteries when smoke detector beeps."
+    },
+    {
+      "id": "breaker",
+      "text": "If a breaker trips, switch it fully OFF then back ON to reset."
+    },
+    {
+      "id": "hvac",
+      "text": "Replace the filter every 60-90 days, or more often if you have pets."
+    }
+  ]
+}
