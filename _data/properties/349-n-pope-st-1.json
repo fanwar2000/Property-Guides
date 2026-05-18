@@ -5,72 +5,47 @@
   "sections": [
     {
       "id": "smoke",
-      "location": "Located in each of the bedrooms as well as the hallways outside the bedrooms.",
-      "image": "/uploads/img_6150.jpg",
-      "images": [
-        {
-          "image": "/uploads/img_6167.jpg"
-        },
-        {
-          "image": "/uploads/img_6139-1-.jpg"
-        },
-        {
-          "image": "/uploads/img_6140-1-.jpg"
-        }
-      ]
+      "location": "None",
+      "image": "",
+      "images": []
     },
     {
       "id": "water-heater",
-      "location": "Located in attic closet upstairs across from the washer and dryer.",
+      "location": "None",
       "image": ""
     },
     {
       "id": "breaker",
-      "location": "Located to the right of the attic closet upstairs.",
-      "image": "/uploads/circuit-breaker-upstairs.jpg",
-      "images": [
-        {
-          "image": "/uploads/img_6170.jpg"
-        }
-      ]
+      "location": "None",
+      "image": "",
+      "images": []
     },
     {
       "id": "shutoff",
-      "location": "The main water shut off is located in the grass near the mailbox. Look for the lid labeled \"water meter\"",
-      "image": "/uploads/20260124_162913-1-.jpg",
-      "images": [
-        {
-          "image": "/uploads/img_6078.jpg"
-        }
-      ]
+      "location": "None",
+      "image": "",
+      "images": []
     },
     {
       "id": "hvac",
-      "location": "The HVAC system is located beneath the house.",
+      "location": "None",
       "images": []
     },
     {
       "id": "meter",
-      "location": "Located around the left side of the house on the siding.",
-      "image": "/uploads/img_6075.jpg"
+      "location": "None",
+      "image": ""
     },
     {
       "id": "cameras",
-      "location": "There are cameras around the exterior of the property.",
-      "image": "/uploads/img_6175.jpg",
-      "images": [
-        {
-          "image": "/uploads/img_6174.jpg"
-        },
-        {
-          "image": "/uploads/img_6173.jpg"
-        }
-      ]
+      "location": "None",
+      "image": "",
+      "images": []
     },
     {
       "id": "thermostat",
-      "location": "Located in the downstairs hallway to the bedrooms.",
-      "image": "/uploads/thermostat-downstairs.jpg"
+      "location": "None",
+      "image": ""
     },
     {
       "id": "general-house-care-",
