@@ -36,6 +36,11 @@
       "city": "Athens, GA 30601"
     },
     {
+      "slug": "346-n-pope",
+      "address": "346 North Pope St. ",
+      "city": "Athens, GA 30601"
+    },
+    {
       "slug": "generic-template",
       "address": "Generic to be duplicated",
       "city": "Athens, GA 30601"
