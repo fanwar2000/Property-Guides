@@ -39,11 +39,11 @@
       "id": "hvac",
       "location": "HVAC filter is located in the ceiling vent at the top of the stairs in the upstairs hallway. Filter size is 12x12. Change in August, November, February, and May.",
       "images": [],
-      "image": "/uploads/140_air_filter_1.jpg"
+      "image": ""
     },
     {
       "id": "meter",
-      "location": "Water meter is located near the road in front of the house. The curb will have two small blue lines indicating the location.",
+      "location": "The electric meter is usually located on the exterior of the house. ",
       "image": ""
     },
     {
