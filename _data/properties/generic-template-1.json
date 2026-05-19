@@ -1,5 +1,5 @@
 {
-  "slug": "generic-template",
+  "slug": "424-georgia-drive",
   "address": "424 Georgia Drive ",
   "city": "Athens, GA 30601",
   "sections": [
@@ -11,29 +11,30 @@
     },
     {
       "id": "water-heater",
-      "location": "None",
-      "image": ""
+      "location": "The water heater is located in the closet to the left of the stairs. ",
+      "image": "/uploads/424-water-heater.jpg"
     },
     {
       "id": "breaker",
-      "location": "None",
-      "image": "",
+      "location": "The circuit breaker is located at the top of the stairs near the attic. ",
+      "image": "/uploads/424-fire-alarm-circuit-breaker.jpg",
       "images": []
     },
     {
       "id": "shutoff",
-      "location": "None",
-      "image": "",
+      "location": "The water shut off is located at the end of the driveway. ",
+      "image": "/uploads/water-meter-1-.jpg",
       "images": []
     },
     {
       "id": "hvac",
-      "location": "None",
-      "images": []
+      "location": "The HVAC system is located at the top of the stairs. ",
+      "images": [],
+      "image": "/uploads/424-filter.jpg"
     },
     {
       "id": "meter",
-      "location": "None",
+      "location": "The electric meter is located on the exterior of the house. ",
       "image": ""
     },
     {
@@ -44,7 +45,7 @@
     },
     {
       "id": "thermostat",
-      "location": "None",
+      "location": "The thermostats are located upstairs and downstairs near the stairway.",
       "image": ""
     },
     {
