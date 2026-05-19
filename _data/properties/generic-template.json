@@ -1,5 +1,5 @@
 {
-  "slug": "generic-template",
+  "slug": "1012-dash-dr",
   "address": "1012 Dash Dr. ",
   "city": "Athens, GA 30601",
   "sections": [
@@ -28,12 +28,12 @@
     },
     {
       "id": "hvac",
-      "location": "None",
+      "location": "The HVAC vent is located on the ceiling outside the downstairs bedroom. ",
       "images": []
     },
     {
       "id": "meter",
-      "location": "None",
+      "location": "The electric meter is located on the exterior around the left side of the home. ",
       "image": ""
     },
     {
@@ -44,7 +44,7 @@
     },
     {
       "id": "thermostat",
-      "location": "None",
+      "location": "The thermostat is located on the wall to the left of the entrance to the downstairs bedroom. ",
       "image": ""
     },
     {
