@@ -31,6 +31,11 @@
       "city": "Athens, GA 30601"
     },
     {
+      "slug": "generic-template",
+      "address": "424 Georgia Drive ",
+      "city": "Athens, GA 30601"
+    },
+    {
       "slug": "1012-dash-dr",
       "address": "1012 Dash Dr. ",
       "city": "Athens, GA 30601"
