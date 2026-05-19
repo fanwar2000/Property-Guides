@@ -1,0 +1,76 @@
+{
+  "slug": "280-fifth-street",
+  "address": "280 Fifth Street",
+  "city": "Athens, GA 30601",
+  "sections": [
+    {
+      "id": "smoke",
+      "location": "Smoke detectors are located in the upstairs and downstairs hallways. ",
+      "image": "",
+      "images": []
+    },
+    {
+      "id": "water-heater",
+      "location": "The water heater is located in the mini hall closet downstairs. ",
+      "image": "/uploads/280-water-heater-tankless.jpg"
+    },
+    {
+      "id": "breaker",
+      "location": "The circuit breaker is located in the laundry room. ",
+      "image": "/uploads/280-circuit-breaker.jpg",
+      "images": []
+    },
+    {
+      "id": "shutoff",
+      "location": "The water shut off is usually located near the road in front of your house. It typically looks like this. ",
+      "image": "/uploads/water-meter.jpg",
+      "images": []
+    },
+    {
+      "id": "hvac",
+      "location": "This home has a split A/C system. ",
+      "images": []
+    },
+    {
+      "id": "meter",
+      "location": "The electric meter is typically located on the exterior of your house. ",
+      "image": ""
+    },
+    {
+      "id": "cameras",
+      "location": "There is a security system in the main floor closet. ",
+      "image": "",
+      "images": []
+    },
+    {
+      "id": "thermostat",
+      "location": "The thermostat is located on the main floor on the wall. ",
+      "image": ""
+    },
+    {
+      "id": "general-house-care-",
+      "location": "None",
+      "image": "",
+      "links": [
+        {
+          "label": "Tenant Resources",
+          "url": "https://cbpresinfo.lovable.app/ "
+        }
+      ]
+    }
+  ],
+  "tips": [
+    {
+      "id": "smoke",
+      "text": "Test smoke detectors at least once a month using the test button.\n\nChange batteries when smoke detector beeps."
+    },
+    {
+      "id": "breaker",
+      "text": "If a breaker trips, switch it fully OFF then back ON to reset."
+    },
+    {
+      "id": "hvac",
+      "text": "Replace the filter every 60-90 days, or more often if you have pets."
+    }
+  ]
+}
