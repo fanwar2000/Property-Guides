@@ -11,6 +11,11 @@
       "city": "Athens, GA 30601"
     },
     {
+      "slug": "280-fifth-street",
+      "address": "280 Fifth Street",
+      "city": "Athens, GA 30601"
+    },
+    {
       "slug": "generic-template",
       "address": "Generic to be duplicated",
       "city": "Athens, GA 30601"
