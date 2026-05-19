@@ -1,0 +1,77 @@
+{
+  "slug": "243-hall-street",
+  "address": "243 Hall Street",
+  "city": "Athens, GA 30601",
+  "sections": [
+    {
+      "id": "smoke",
+      "location": "The smoke alarms are located in the hallways. ",
+      "image": "/uploads/243-smoke-alram-2.jpg",
+      "images": []
+    },
+    {
+      "id": "water-heater",
+      "location": "None",
+      "image": ""
+    },
+    {
+      "id": "breaker",
+      "location": "The circuit breaker is located in the hallway. ",
+      "image": "/uploads/243-circuit-breaker.jpg",
+      "images": []
+    },
+    {
+      "id": "shutoff",
+      "location": "The water shutoff is typically located at the end of the driveway near the curb.",
+      "image": "/uploads/screenshot-2026-05-19-115840.png",
+      "images": []
+    },
+    {
+      "id": "hvac",
+      "location": "The airfilter is located in one of the bedrooms near the furnace. ",
+      "images": [],
+      "image": "/uploads/243-air-filter-2.jpg"
+    },
+    {
+      "id": "meter",
+      "location": "The electric meter is typically located on the exterior of the home. ",
+      "image": ""
+    },
+    {
+      "id": "cameras",
+      "location": "None",
+      "image": "",
+      "images": []
+    },
+    {
+      "id": "thermostat",
+      "location": "The thermostat is located on the wall outside the bathroom.",
+      "image": ""
+    },
+    {
+      "id": "general-house-care-",
+      "location": "None",
+      "image": "",
+      "links": [
+        {
+          "label": "Tenant Resources",
+          "url": "https://cbpresinfo.lovable.app/ "
+        }
+      ]
+    }
+  ],
+  "tips": [
+    {
+      "id": "smoke",
+      "text": "Test smoke detectors at least once a month using the test button.\n\nChange batteries when smoke detector beeps."
+    },
+    {
+      "id": "breaker",
+      "text": "If a breaker trips, switch it fully OFF then back ON to reset."
+    },
+    {
+      "id": "hvac",
+      "text": "Replace the filter every 60-90 days, or more often if you have pets."
+    }
+  ]
+}
