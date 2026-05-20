@@ -1,0 +1,82 @@
+{
+  "slug": "140-oxford-court",
+  "address": "142 Oxford Court",
+  "city": "Athens, GA 30606",
+  "sections": [
+    {
+      "id": "smoke",
+      "location": "The smoke alarms are located in the bedrooms and near the kitchen. ",
+      "image": "",
+      "images": []
+    },
+    {
+      "id": "water-heater",
+      "location": "Electric water heater (Rheem EverKleen) is located in the kitchen closet.",
+      "image": "/uploads/140_water_heater.jpg",
+      "images": [
+        {
+          "image": "/uploads/140_kitchen_view.jpg"
+        }
+      ]
+    },
+    {
+      "id": "breaker",
+      "location": "Circuit breaker panel is located on the wall behind the door of the front bedroom downstairs.",
+      "image": "/uploads/140_circuit_breaker.jpg",
+      "images": []
+    },
+    {
+      "id": "shutoff",
+      "location": "Water meter / main shut off is located near the road in front of the house. Look for two small blue lines on the curb indicating the water meter location.",
+      "image": "",
+      "images": []
+    },
+    {
+      "id": "hvac",
+      "location": "HVAC filter is located in the ceiling vent at the top of the stairs in the upstairs hallway. Filter size is 12x12. Change in August, November, February, and May.",
+      "images": [],
+      "image": ""
+    },
+    {
+      "id": "meter",
+      "location": "The electric meter is usually located on the exterior of the house. ",
+      "image": ""
+    },
+    {
+      "id": "cameras",
+      "location": "Not applicable — no camera system at this property.",
+      "image": "",
+      "images": []
+    },
+    {
+      "id": "thermostat",
+      "location": "Thermostat is located on the wall on the main floor near the front entry. In summer set no lower than 72°F. In winter set no higher than 68°F. Do NOT turn off the unit when away.",
+      "image": ""
+    },
+    {
+      "id": "general-house-care-",
+      "location": "Fire extinguisher is located under the kitchen sink. Garbage disposal (InSinkErator Badger 5) is under the kitchen sink. Clean lint trap after every dryer use — FIRE HAZARD. Do not wash large loads. Do not wash towels with clothes. Run bathroom vent fan for at least 15 minutes after showering. Leave bathroom doors open to air out. Remove hair from drain daily.",
+      "image": "/uploads/fire_extenguisher_140.jpg",
+      "links": [
+        {
+          "label": "Tenant Resources",
+          "url": "https://cbpresinfo.lovable.app/"
+        }
+      ]
+    }
+  ],
+  "tips": [
+    {
+      "id": "smoke",
+      "text": "Test smoke detectors at least once a month using the test button.\n\nChange batteries when smoke detector beeps.\n\nNever borrow a battery from a smoke detector.\n\nVacuum or dust detectors regularly."
+    },
+    {
+      "id": "breaker",
+      "text": "If a breaker trips, switch it fully OFF then back ON to reset.\n\nCircuit breaker is located behind the door of the front bedroom downstairs."
+    },
+    {
+      "id": "hvac",
+      "text": "Filter size is 12x12. Change in August, November, February, and May.\n\nTurn unit off before replacing filter. Check for gaps around edges after installing.\n\nDo NOT turn off the HVAC unit when away — adjust temperature instead to prevent humidity and mold."
+    }
+  ]
+}
