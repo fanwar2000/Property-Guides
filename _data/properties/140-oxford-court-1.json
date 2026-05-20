@@ -1,5 +1,5 @@
 {
-  "slug": "140-oxford-court",
+  "slug": "142-oxford-court",
   "address": "142 Oxford Court",
   "city": "Athens, GA 30606",
   "sections": [
@@ -12,12 +12,8 @@
     {
       "id": "water-heater",
       "location": "Electric water heater (Rheem EverKleen) is located in the kitchen closet.",
-      "image": "/uploads/140_water_heater.jpg",
-      "images": [
-        {
-          "image": "/uploads/140_kitchen_view.jpg"
-        }
-      ]
+      "image": "",
+      "images": []
     },
     {
       "id": "breaker",
