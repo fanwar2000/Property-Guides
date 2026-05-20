@@ -1,0 +1,76 @@
+{
+  "slug": "598-w-hancock",
+  "address": "598 W Hancock Ave",
+  "city": "Athens, GA 30601",
+  "sections": [
+    {
+      "id": "smoke",
+      "location": "Smoke detectors are located in the living room, kitchen, and bedrooms. ",
+      "image": "/uploads/62328e80-c737-4a2a-9eb6-3e26b07ffd08.jpeg",
+      "images": []
+    },
+    {
+      "id": "water-heater",
+      "location": "None",
+      "image": ""
+    },
+    {
+      "id": "breaker",
+      "location": "None",
+      "image": "",
+      "images": []
+    },
+    {
+      "id": "shutoff",
+      "location": "The water shut off is located near the curb at the front of the house. ",
+      "image": "/uploads/20260124_162807-1-.jpg",
+      "images": []
+    },
+    {
+      "id": "hvac",
+      "location": "None",
+      "images": []
+    },
+    {
+      "id": "meter",
+      "location": "The electric meter is located on the exterior of the house.",
+      "image": ""
+    },
+    {
+      "id": "cameras",
+      "location": "None",
+      "image": "",
+      "images": []
+    },
+    {
+      "id": "thermostat",
+      "location": "The thermostat is in the hall near the kitchen. ",
+      "image": "/uploads/fe0ea03c-a143-4917-bb8b-b370cd8921f9.jpeg"
+    },
+    {
+      "id": "general-house-care-",
+      "location": "None",
+      "image": "",
+      "links": [
+        {
+          "label": "Tenant Resources",
+          "url": "https://cbpresinfo.lovable.app/ "
+        }
+      ]
+    }
+  ],
+  "tips": [
+    {
+      "id": "smoke",
+      "text": "Test smoke detectors at least once a month using the test button.\n\nChange batteries when smoke detector beeps."
+    },
+    {
+      "id": "breaker",
+      "text": "If a breaker trips, switch it fully OFF then back ON to reset."
+    },
+    {
+      "id": "hvac",
+      "text": "Replace the filter every 60-90 days, or more often if you have pets."
+    }
+  ]
+}
