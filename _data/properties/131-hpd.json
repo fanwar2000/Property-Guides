@@ -1,0 +1,77 @@
+{
+  "slug": "131-hpd",
+  "address": "131 Highland Park Drive ",
+  "city": "Athens, GA 30601",
+  "sections": [
+    {
+      "id": "smoke",
+      "location": "The smoke detectors are located upstairs and downstairs above the door frames.",
+      "image": "",
+      "images": []
+    },
+    {
+      "id": "water-heater",
+      "location": "Located in the laundry room. ",
+      "image": ""
+    },
+    {
+      "id": "breaker",
+      "location": "Located in laundry room. ",
+      "image": "",
+      "images": []
+    },
+    {
+      "id": "shutoff",
+      "location": "The water shut off is likely located at the end of the drive way near the curb.",
+      "image": "/uploads/screenshot-2026-05-19-115840.png",
+      "images": []
+    },
+    {
+      "id": "hvac",
+      "location": "The HVAC filter is located in the living room. ",
+      "images": [],
+      "image": "/uploads/125-filter.jpeg"
+    },
+    {
+      "id": "meter",
+      "location": "The electric meter is usually located around the exterior of the home.",
+      "image": ""
+    },
+    {
+      "id": "cameras",
+      "location": "None",
+      "image": "",
+      "images": []
+    },
+    {
+      "id": "thermostat",
+      "location": "Located on the wall on the main floor. ",
+      "image": "/uploads/125-thermostat.jpeg"
+    },
+    {
+      "id": "general-house-care-",
+      "location": "None",
+      "image": "",
+      "links": [
+        {
+          "label": "Tenant Resources",
+          "url": "https://cbpresinfo.lovable.app/ "
+        }
+      ]
+    }
+  ],
+  "tips": [
+    {
+      "id": "smoke",
+      "text": "Test smoke detectors at least once a month using the test button.\n\nChange batteries when smoke detector beeps."
+    },
+    {
+      "id": "breaker",
+      "text": "If a breaker trips, switch it fully OFF then back ON to reset."
+    },
+    {
+      "id": "hvac",
+      "text": "Replace the filter every 60-90 days, or more often if you have pets."
+    }
+  ]
+}
