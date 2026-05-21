@@ -6,20 +6,24 @@
     {
       "id": "smoke",
       "location": "The smoke alarms are located in the bedrooms and near the kitchen. ",
-      "image": "",
+      "image": "/uploads/142-smoke-alarm.jpg",
       "images": []
     },
     {
       "id": "water-heater",
       "location": "Electric water heater (Rheem EverKleen) is located in the kitchen closet.",
-      "image": "",
+      "image": "/uploads/142-water-heater.jpg",
       "images": []
     },
     {
       "id": "breaker",
       "location": "Circuit breaker panel is located on the wall behind the door of the front bedroom downstairs.",
       "image": "/uploads/140_circuit_breaker.jpg",
-      "images": []
+      "images": [
+        {
+          "image": "/uploads/142-circuit-breaker-2.jpg"
+        }
+      ]
     },
     {
       "id": "shutoff",
@@ -31,7 +35,7 @@
       "id": "hvac",
       "location": "HVAC filter is located in the ceiling vent at the top of the stairs in the upstairs hallway. Filter size is 12x12. Change in August, November, February, and May.",
       "images": [],
-      "image": ""
+      "image": "/uploads/142-air-filter-smoke-alarm-2.jpg"
     },
     {
       "id": "meter",
