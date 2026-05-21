@@ -12,29 +12,34 @@
     {
       "id": "water-heater",
       "location": "The water heater is located in the garage.",
-      "image": ""
+      "image": "/uploads/screenshot-2026-05-21-133525.png"
     },
     {
       "id": "breaker",
       "location": "The circuit breaker is located in the garage. ",
-      "image": "",
+      "image": "/uploads/screenshot-2026-05-21-133531.png",
       "images": []
     },
     {
       "id": "shutoff",
       "location": "Water Meter is located on the right side of the property between the back trees. There are double blue lines by the road marking the water meter location.",
-      "image": "",
+      "image": "/uploads/screenshot-2026-05-21-133545.png",
       "images": []
     },
     {
       "id": "hvac",
       "location": "The HVAC vents are located downstairs in the living room and upstairs in the hallway. ",
-      "images": []
+      "images": [
+        {
+          "image": "/uploads/screenshot-2026-05-21-133553.png"
+        }
+      ],
+      "image": "/uploads/screenshot-2026-05-21-133600.png"
     },
     {
       "id": "meter",
       "location": "The electric meter is located outside the back door by the garage. ",
-      "image": ""
+      "image": "/uploads/screenshot-2026-05-21-133607.png"
     },
     {
       "id": "cameras",
