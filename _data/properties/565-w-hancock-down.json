@@ -6,13 +6,17 @@
     {
       "id": "smoke",
       "location": "Fire alarms are located outside the bedrooms and in the hallways.",
-      "image": "",
-      "images": []
+      "image": "/uploads/smoke-alarm-1.jpg",
+      "images": [
+        {
+          "image": "/uploads/smoke-alarm-4.jpg"
+        }
+      ]
     },
     {
       "id": "water-heater",
       "location": "The water heater is located in the closet near the laundry room. ",
-      "image": ""
+      "image": "/uploads/water-heater-2-.jpg"
     },
     {
       "id": "breaker",
@@ -29,7 +33,8 @@
     {
       "id": "hvac",
       "location": "The HVAC vent is on the wall near the circuit breaker in the living room.",
-      "images": []
+      "images": [],
+      "image": "/uploads/air-filter.jpg"
     },
     {
       "id": "meter",
@@ -45,7 +50,7 @@
     {
       "id": "thermostat",
       "location": "The thermostat is located on the wall near the circuit breaker in the living room.",
-      "image": ""
+      "image": "/uploads/smoke-alarm-1.jpg"
     },
     {
       "id": "general-house-care-",
