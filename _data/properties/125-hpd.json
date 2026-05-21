@@ -12,12 +12,12 @@
     {
       "id": "water-heater",
       "location": "Located in the laundry room. ",
-      "image": ""
+      "image": "/uploads/img_6273.jpg"
     },
     {
       "id": "breaker",
       "location": "Located in laundry room. ",
-      "image": "/uploads/125-breaker.jpeg",
+      "image": "/uploads/img_6274.jpg",
       "images": []
     },
     {
@@ -46,7 +46,12 @@
     {
       "id": "thermostat",
       "location": "Located on the wall on the main floor. ",
-      "image": "/uploads/125-thermostat.jpeg"
+      "image": "/uploads/125-thermostat.jpeg",
+      "images": [
+        {
+          "image": "/uploads/img_6275-1-.jpg"
+        }
+      ]
     },
     {
       "id": "general-house-care-",
