@@ -6,30 +6,39 @@
     {
       "id": "smoke",
       "location": "Fire alarms are located in the bedrooms downstairs, in the hallways, and outside the bedroom upstairs. ",
-      "image": "",
-      "images": []
+      "image": "/uploads/565-fire-alarm-4.jpg",
+      "images": [
+        {
+          "image": "/uploads/image-from-ios-2021-03-29t094121.303.jpg"
+        }
+      ]
     },
     {
       "id": "water-heater",
       "location": "The water heater is located in the laundry room. ",
-      "image": ""
+      "image": "/uploads/565-up-water-heater.jpg"
     },
     {
       "id": "breaker",
       "location": "The circuit breaker is on the wall by the front door. ",
-      "image": "",
+      "image": "/uploads/565-up-circuit-breaker.jpg",
       "images": []
     },
     {
       "id": "shutoff",
       "location": "The water shut off is located in the front yard near the curb. ",
-      "image": "",
+      "image": "/uploads/20260124_163117-1-.jpg",
       "images": []
     },
     {
       "id": "hvac",
       "location": "The HVAC vent downstairs is on the ceiling in the hall between the kitchen and living room. The HVAC vent upstairs is on the wall near the attic access.",
-      "images": []
+      "images": [
+        {
+          "image": "/uploads/565-up-air-filter-2.jpg"
+        }
+      ],
+      "image": "/uploads/565-up-air-filter.jpg"
     },
     {
       "id": "meter",
@@ -45,7 +54,7 @@
     {
       "id": "thermostat",
       "location": "The upstairs thermostat is in the upstairs bedroom. The downstairs thermostat is on the wall near the back door. ",
-      "image": ""
+      "image": "/uploads/565-fire-alarm-5.jpg"
     },
     {
       "id": "general-house-care-",
