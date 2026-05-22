@@ -21,8 +21,8 @@
     },
     {
       "id": "water-heater",
-      "location": "Located in the crawl space below the home with the HVAC system. ",
-      "image": ""
+      "location": "Located in the crawl space below the home with the HVAC system.  The water heater is located by the back of the house. ",
+      "image": "/uploads/349-water-heater.jpg"
     },
     {
       "id": "breaker",
@@ -46,8 +46,9 @@
     },
     {
       "id": "hvac",
-      "location": "The HVAC system is located beneath the house.",
-      "images": []
+      "location": "The HVAC system is located in the crawl space beneath the house. Its to the left of the water heater. ",
+      "images": [],
+      "image": "/uploads/349-hvac.jpg"
     },
     {
       "id": "meter",
