@@ -1,0 +1,76 @@
+{
+  "slug": "farmers-exchange",
+  "address": "580 E Broad St. ",
+  "city": "Athens, GA 30601",
+  "sections": [
+    {
+      "id": "smoke",
+      "location": "Smoke detectors are typically located on the ceilings and walls in the hallways, kitchen, and bedrooms of the units. Some smoke detectors may be out of reach of tenants. ",
+      "image": "",
+      "images": []
+    },
+    {
+      "id": "water-heater",
+      "location": "Water heaters are typically located in a hall closet or above the bathroom. Some water heaters may be out of reach for tenants.",
+      "image": ""
+    },
+    {
+      "id": "breaker",
+      "location": "The circuit breakers are typically located on the wall near the kitchen. ",
+      "image": "",
+      "images": []
+    },
+    {
+      "id": "shutoff",
+      "location": "Water shut offs to units are located outside of the units in the exterior hallways. There are levers attached to pipes leading into the units that turn off the water to the unit.",
+      "image": "",
+      "images": []
+    },
+    {
+      "id": "hvac",
+      "location": "Each unit has its own HVAC system. It is typically located in a hall or bedroom closet. ",
+      "images": []
+    },
+    {
+      "id": "meter",
+      "location": "There is an electric meter room that is not accessible to tenants. ",
+      "image": ""
+    },
+    {
+      "id": "cameras",
+      "location": "There are cameras located on the interior and exterior of each entrance as well as in the common areas (laundry room, pool table room, study room, patio) ",
+      "image": "",
+      "images": []
+    },
+    {
+      "id": "thermostat",
+      "location": "Each unit has its own thermostat. Is is typically located on the wall near the entrance of the unit. ",
+      "image": ""
+    },
+    {
+      "id": "general-house-care-",
+      "location": "None",
+      "image": "",
+      "links": [
+        {
+          "label": "Tenant Resources",
+          "url": "https://cbpresinfo.lovable.app/ "
+        }
+      ]
+    }
+  ],
+  "tips": [
+    {
+      "id": "smoke",
+      "text": "Test smoke detectors at least once a month using the test button.\n\nChange batteries when smoke detector beeps."
+    },
+    {
+      "id": "breaker",
+      "text": "If a breaker trips, switch it fully OFF then back ON to reset."
+    },
+    {
+      "id": "hvac",
+      "text": "Replace the filter every 60-90 days, or more often if you have pets."
+    }
+  ]
+}
