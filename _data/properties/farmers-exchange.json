@@ -6,18 +6,18 @@
     {
       "id": "smoke",
       "location": "Smoke detectors are typically located on the ceilings and walls in the hallways, kitchen, and bedrooms of the units. Some smoke detectors may be out of reach of tenants. ",
-      "image": "",
+      "image": "/uploads/img_7768.jpg",
       "images": []
     },
     {
       "id": "water-heater",
       "location": "Water heaters are typically located in a hall closet or above the bathroom. Some water heaters may be out of reach for tenants.",
-      "image": ""
+      "image": "/uploads/img_7765.jpg"
     },
     {
       "id": "breaker",
       "location": "The circuit breakers are typically located on the wall near the kitchen. ",
-      "image": "",
+      "image": "/uploads/img_7763.jpg",
       "images": []
     },
     {
@@ -29,7 +29,8 @@
     {
       "id": "hvac",
       "location": "Each unit has its own HVAC system. It is typically located in a hall or bedroom closet. ",
-      "images": []
+      "images": [],
+      "image": "/uploads/img_7766.jpg"
     },
     {
       "id": "meter",
@@ -45,7 +46,7 @@
     {
       "id": "thermostat",
       "location": "Each unit has its own thermostat. Is is typically located on the wall near the entrance of the unit. ",
-      "image": ""
+      "image": "/uploads/img_7764.jpg"
     },
     {
       "id": "general-house-care-",
