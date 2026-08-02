@@ -1,6 +1,11 @@
 {
   "properties": [
     {
+      "slug": "1012-dash-dr",
+      "address": "1012 Dash Drive",
+      "city": "Athens, GA 30601"
+    },
+    {
       "slug": "1200-pete-dickens",
       "address": "1200 Pete Dickens Road",
       "city": "Athens, GA 30601"
@@ -108,11 +113,6 @@
     {
       "slug": "424-georgia-drive",
       "address": "424 Georgia Drive ",
-      "city": "Athens, GA 30601"
-    },
-    {
-      "slug": "1012-dash-dr",
-      "address": "1012 Dash Drive",
       "city": "Athens, GA 30601"
     }
   ]
