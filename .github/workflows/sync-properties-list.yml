@@ -22,6 +22,8 @@ jobs:
           for f in sorted(glob.glob('_data/properties/*.json')):
               with open(f) as fh:
                   d = json.load(fh)
+                  if d.get('admin'):
+                      continue
                   props.append({'slug': d['slug'], 'address': d['address'], 'city': d['city']})
           with open('_data/properties-list.json', 'w') as out:
               json.dump({'properties': props}, out, indent=2)
