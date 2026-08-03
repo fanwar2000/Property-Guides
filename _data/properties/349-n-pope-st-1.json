@@ -1,4 +1,5 @@
 {
+  "admin": true,
   "slug": "generic-template",
   "address": "Generic to be duplicated",
   "city": "Athens, GA 30601",
